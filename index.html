@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adonnis Blake — Product Engineer / AI Build Practice</title>
+  <meta name="description" content="A simplified portfolio for Adonnis Blake: product engineering, Claude-assisted GitHub ticket work, live testing, UI/UX systems, and visual problem-solving." />
+  <meta property="og:title" content="Adonnis Blake — Portfolio" />
+  <meta property="og:description" content="Product engineering, Claude-assisted GitHub ticket work, live testing, UI/UX systems, and visual problem-solving with a concept-art edge." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/brand/adonnis-brand-icon.png" />
+  <link rel="apple-touch-icon" href="assets/brand/adonnis-brand-icon.png" />
+  <link rel="preload" as="image" href="assets/profile/adonnis-portrait.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" data-reveal>
+    <a class="brand" href="index.html#top" aria-label="Adonnis Blake home">
+      <span class="brand-mark"><img src="assets/brand/adonnis-brand-icon.png" alt="" /></span>
+      <span class="brand-copy"><strong>Adonnis Blake</strong><small>Product Engineer · AI Build · UX</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Dark</button>
+      <button class="button button-dark nav-project-button" type="button" data-inquiry-open>Start project</button>
+    </nav>
+    <button class="menu-button" type="button" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+  </header>
+
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#work">Work</a>
+    <a href="#method">Method</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Dark</button>
+    <button class="button button-dark" type="button" data-inquiry-open>Start project</button>
+  </nav>
+
+  <main id="top">
+    <section class="hero apple-hero" aria-label="Portfolio introduction">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">Portfolio / 2026</p>
+        <h1>Product engineering that gets understood fast.</h1>
+        <p class="lead">I’m Adonnis Blake — a Product Engineer turning problem tickets into shipped, tested product solutions with Claude, GitHub, live testing, and a designer’s eye for clarity.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#work">View selected work</a>
+          <button class="button button-ghost" type="button" data-inquiry-open>Start a project</button>
+        </div>
+      </div>
+
+      <aside class="hero-product" aria-label="Portfolio summary card" data-reveal>
+        <div class="hero-device">
+          <img src="assets/profile/adonnis-portrait.jpg" alt="Portrait of Adonnis Blake" />
+          <div class="device-overlay">
+            <span>AB</span>
+            <p>Product Engineer · Claude · GitHub · Live testing</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section quick-read" aria-labelledby="quick-read-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">The quick read</p>
+        <h2 id="quick-read-title">A product engineer with a designer’s eye.</h2>
+        <p>Simple first. More detail when it helps. My focus has shifted toward product engineering: reading the ticket, using Claude to move faster, testing the solution live, and keeping the experience clear enough for real users to understand.</p>
+      </div>
+      <div class="feature-strip quick-lanes" data-reveal aria-label="Core creative lanes">
+        <article><span>01</span><h3>Product engineering</h3><p>Turning real tickets into product fixes, working behavior, and testable improvements.</p></article>
+        <article><span>02</span><h3>AI-assisted solving</h3><p>Using Claude as a build partner to reason through code, edge cases, and solution paths.</p></article>
+        <article><span>03</span><h3>Live testing</h3><p>Checking changes against the actual product so the work moves past theory into proof.</p></article>
+        <article><span>04</span><h3>Design clarity</h3><p>Keeping UI/UX, hierarchy, and user understanding as the quality bar underneath the code.</p></article>
+      </div>
+    </section>
+
+    <section class="section skill-update" aria-labelledby="skill-update-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">Product engineering workflow</p>
+        <h2 id="skill-update-title">From ticket to tested behavior.</h2>
+        <p>I can’t show every internal ticket or codebase, so this section explains the repeatable workflow: understand the ticket, use Claude to reason through options, make the smallest safe change, test the behavior live, then document what changed.</p>
+      </div>
+
+      <div class="engineering-workflow" data-reveal>
+        <div class="workflow-visual" aria-label="Product engineering workflow preview">
+          <div class="workflow-window">
+            <div class="workflow-window-top">
+              <span></span><span></span><span></span>
+              <p>AI-assisted product loop</p>
+            </div>
+            <ol class="workflow-code-lines" aria-label="Product engineering workflow steps">
+              <li><b>01</b><span>Read ticket</span></li>
+              <li><b>02</b><span>Map possible fixes</span></li>
+              <li><b>03</b><span>Build safe change</span></li>
+              <li><b>04</b><span>Live test behavior</span></li>
+              <li><b>05</b><span>Document result</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="workflow-accordion" aria-label="Product engineering focus areas">
+          <details class="workflow-tab" open>
+            <summary><span>01</span><strong>GitHub ticket</strong></summary>
+            <div class="workflow-tab-body">
+              <p><b>What it is:</b> The ticket is the source of the product problem: expected behavior, current behavior, user impact, and the constraints around the fix.</p>
+              <p><b>How I use it:</b> I slow the issue down before touching the build. I look for what needs to change, what could break, and what “done” should look like in the product.</p>
+              <p><b>Why it matters:</b> The solution starts with the actual problem instead of guessing from the interface alone.</p>
+            </div>
+          </details>
+
+          <details class="workflow-tab">
+            <summary><span>02</span><strong>Claude reasoning</strong></summary>
+            <div class="workflow-tab-body">
+              <p><b>What it is:</b> Claude is a reasoning and build partner that helps compare code paths, possible causes, edge cases, and implementation options.</p>
+              <p><b>How I use it:</b> I use it like a senior pair-programming assistant: ask better questions, test assumptions, compare possible fixes, and avoid overbuilding the solution.</p>
+              <p><b>Why it matters:</b> AI helps me move faster, but the work stays connected to the ticket, the user need, and the product behavior I need to prove.</p>
+            </div>
+          </details>
+
+          <details class="workflow-tab">
+            <summary><span>03</span><strong>Build the fix</strong></summary>
+            <div class="workflow-tab-body">
+              <p><b>What it is:</b> The build step turns the reasoning into a working change: UI behavior, product logic, layout adjustment, or bug fix.</p>
+              <p><b>How I use it:</b> I aim for the smallest safe change first. The goal is not to complicate the code — it is to make the product behave correctly.</p>
+              <p><b>Why it matters:</b> Smaller changes are easier to review, easier to test, and easier to explain to the people depending on the product.</p>
+            </div>
+          </details>
+
+          <details class="workflow-tab">
+            <summary><span>04</span><strong>Live test</strong></summary>
+            <div class="workflow-tab-body">
+              <p><b>What it is:</b> Live testing checks the change inside the actual product flow instead of only trusting the code, the mockup, or the AI suggestion.</p>
+              <p><b>How I use it:</b> I test the before-and-after behavior, make sure the expected result happens, and watch for anything that feels confusing or broken for the user.</p>
+              <p><b>Why it matters:</b> The work becomes proof-based: ticket → build → observed behavior.</p>
+            </div>
+          </details>
+
+          <details class="workflow-tab">
+            <summary><span>05</span><strong>Document result</strong></summary>
+            <div class="workflow-tab-body">
+              <p><b>What it is:</b> Documentation explains what changed, why it changed, how it was tested, and what someone else should know when reviewing the work.</p>
+              <p><b>How I use it:</b> I capture the important decisions, test notes, and product behavior so the solution is easier to review, revisit, and build on later.</p>
+              <p><b>Why it matters:</b> Clear documentation turns a fix into shared understanding — and that is where design judgment supports engineering work.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section" aria-labelledby="selected-work-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">Selected work</p>
+        <h2 id="selected-work-title">Four focused projects. Product thinking first.</h2>
+        <p>Each card gives the basic story. The product engineering focus leads; the design work supports the system behind it.</p>
+      </div>
+      <div class="filter-row" data-reveal aria-label="Project filters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="product" type="button">Product</button>
+        <button class="filter" data-filter="brand" type="button">Brand</button>
+        <button class="filter" data-filter="web" type="button">Web</button>
+      </div>
+
+      <div class="work-grid" aria-label="Selected projects">
+
+        <article class="project-card" data-category="product" data-modal="twoday" data-reveal>
+          <button class="project-visual has-image visual-twoday" type="button" data-image="assets/2day/2day-actual-home.png" data-caption="2DAY Apps — actual Home layout from the current app build">
+            <span class="project-number">01</span>
+            <img src="assets/2day/2day-actual-home.png" alt="2DAY Apps actual home layout preview" loading="lazy" />
+          </button>
+          <div class="project-info">
+            <p>Product Engineering · AI-assisted app build</p>
+            <h3>2DAY Apps Journey</h3>
+            <span>The real 2DAY app direction: product logic, daily goal execution, AI-assisted iteration, and a UI that keeps the next action obvious.</span>
+            <div class="card-actions">
+              <button class="text-button" type="button" data-modal-open="twoday">Open project</button>
+              <a class="text-button" href="assets/2day/latest/index.html" target="_blank" rel="noreferrer">Latest working version</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web" data-modal="society" data-reveal>
+          <button class="project-visual visual-society" type="button" data-modal-open="society" aria-label="Open Society 5ive project">
+            <span class="project-number">02</span>
+            <div class="society-mini" aria-hidden="true">
+              <strong>Society 5ive</strong>
+              <span></span><span></span><span></span>
+              <div class="society-mini-grid">
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+          </button>
+          <div class="project-info">
+            <p>Web Strategy · Interior Design</p>
+            <h3>Society 5ive Site Restructure</h3>
+            <span>Current site as the baseline, revamp attempt as the clearer service and portfolio path.</span>
+            <div class="card-actions">
+              <button class="text-button" type="button" data-modal-open="society">Open project</button>
+              <a class="text-button" href="https://society5ive.com/" target="_blank" rel="noreferrer">Current site</a>
+              <a class="text-button" href="assets/society5ive/index.html" target="_blank" rel="noreferrer">Revamp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="brand" data-modal="naples" data-reveal>
+          <button class="project-visual has-image visual-mascot" type="button" data-image="assets/naples/naples-manatee-captain.png" data-caption="Only In Naples — captain manatee mascot merch concept">
+            <span class="project-number">03</span>
+            <img src="assets/naples/naples-manatee-captain.png" alt="Only In Naples captain manatee mascot" loading="lazy" />
+          </button>
+          <div class="project-info">
+            <p>Brand System · Character Merch</p>
+            <h3>Only In Naples</h3>
+            <span>A local merch mascot system built around a repeatable manatee character.</span>
+            <div class="card-actions">
+              <button class="text-button" type="button" data-modal-open="naples">Open project</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="brand" data-modal="neighbors" data-reveal>
+          <button class="project-visual has-image visual-neighbor" type="button" data-image="assets/neighbors/neighbors-wordmark.png" data-caption="Neighbors Bar — custom wordmark exploration">
+            <span class="project-number">04</span>
+            <div class="neighbor-preview" aria-hidden="true">
+              <img class="neighbor-wordmark" src="assets/neighbors/neighbors-wordmark.png" alt="" loading="lazy" />
+              <div class="neighbor-preview-strip">
+                <img src="assets/neighbors/neighbors-wall-close.jpg" alt="" loading="lazy" />
+                <img src="assets/neighbors/neighbors-building.jpg" alt="" loading="lazy" />
+              </div>
+            </div>
+          </button>
+          <div class="project-info">
+            <p>Brand Identity · Environmental Graphics</p>
+            <h3>Neighbors Bar</h3>
+            <span>A neighborhood bar identity carried from logo exploration into mural and signage use.</span>
+            <div class="card-actions">
+              <button class="text-button" type="button" data-modal-open="neighbors">Open project</button>
+              <a class="text-button" href="https://neighborsgso.com/" target="_blank" rel="noreferrer">Live site</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="twoday-case" class="section product-section split-case twoday-real-case" aria-labelledby="twoday-title">
+      <div class="case-copy" data-reveal>
+        <p class="eyebrow">Featured case / Product Engineering</p>
+        <h2 id="twoday-title">2DAY shows the shift from design thinking to product engineering.</h2>
+        <p>2DAY is still a product build journey, but the focus now sits closer to product engineering: translate the user goal, shape the logic, use AI assistance to accelerate the build, test the working version, and keep the interface simple enough that the next action is obvious.</p>
+        <div class="case-actions">
+          <button class="button button-dark" type="button" data-modal-open="twoday">Open case</button>
+          <a class="button button-ghost" href="assets/2day/latest/index.html" target="_blank" rel="noreferrer">Latest working version</a>
+          <button class="button button-ghost" type="button" data-inquiry-open>Start project</button>
+        </div>
+      </div>
+      <div class="twoday-actual-showcase" data-reveal>
+        <button class="twoday-proof" type="button" data-image="assets/2day/2day-actual-home.png" data-caption="2DAY Apps — actual Home layout from the current app build">
+          <img src="assets/2day/2day-actual-home.png" alt="Actual 2DAY app home layout with Lighter + Stronger goal, journey progress, stats, and current focus" loading="lazy">
+        </button>
+        <div class="twoday-proof-notes">
+          <p class="eyebrow">Actual app layout</p>
+          <h3>One screen. One build path. Test what matters.</h3>
+          <ul>
+            <li>Goal-first product logic: <strong>Lighter + Stronger</strong></li>
+            <li>Claude-assisted iteration helps move from idea to working behavior</li>
+            <li>Live testing checks whether the screen actually supports the user</li>
+            <li>Bottom nav keeps Home, Day, Plan, and Setup paths direct</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="society-case" class="section simple-case" aria-labelledby="society-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">Web strategy / Interior design</p>
+        <h2 id="society-title">Society 5ive needed a clearer story before deeper styling.</h2>
+        <p>The goal was not just to make pages prettier. It was to restructure the experience so services, proof, portfolio work, and contact paths made sense faster.</p>
+      </div>
+      <div class="bento-grid" data-reveal>
+        <article><span>Baseline</span><h3>Current site</h3><p>Use the live site as the reference point for what exists now.</p><a class="text-button" href="https://society5ive.com/" target="_blank" rel="noreferrer">Open current site</a></article>
+        <article><span>Attempt</span><h3>Revamp build</h3><p>A platform-flexible static direction with Home, About, Commercial, Residential, Portfolio, Journal, and Contact.</p><a class="text-button" href="assets/society5ive/index.html" target="_blank" rel="noreferrer">Open revamp</a></article>
+        <article><span>Purpose</span><h3>Make the path obvious</h3><p>Help visitors understand what Society 5ive does, where it works, and why the projects matter.</p><button class="text-button" type="button" data-modal-open="society">Open case</button></article>
+      </div>
+    </section>
+
+    <section id="neighbors-case" class="section simple-case" aria-labelledby="neighbors-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">Brand identity / Neighbors Bar</p>
+        <h2 id="neighbors-title">A neighborhood bar identity with sign-painter punch.</h2>
+        <p>Warm, loud, approachable, and built to work from a tiny bottle label to a huge painted wall.</p>
+      </div>
+      <div class="feature-panel" data-reveal>
+        <button data-image="assets/neighbors/neighbors-wall-close.jpg" data-caption="Neighbors wall mark — corrected orientation"><img src="assets/neighbors/neighbors-wall-close.jpg" alt="Neighbors wall mark on pink brick" loading="lazy"></button>
+        <div>
+          <p class="eyebrow">Identity examples</p>
+          <h3>Compressed into one clean proof line.</h3>
+          <p>Open the project to see logo marks, mood boards, signage, mural proof, and environmental applications.</p>
+          <button class="button button-dark" type="button" data-modal-open="neighbors">More examples</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="naples-case" class="section simple-case" aria-labelledby="naples-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">Brand system / Only In Naples</p>
+        <h2 id="naples-title">A manatee mascot system that can keep generating stories.</h2>
+        <p>Captain, golfer, patriotic local, shirt-back graphic, and social proof all show how one character system can stretch across merch and community moments.</p>
+      </div>
+      <div class="naples-strip" data-reveal>
+        <button data-image="assets/naples/only-in-naples-shirt-back.jpg" data-caption="Only In Naples — shirt-back typographic graphic"><img src="assets/naples/only-in-naples-shirt-back.jpg" alt="Only In Naples shirt back graphic" loading="lazy"></button>
+        <button data-image="assets/naples/naples-manatee-captain.png" data-caption="Only In Naples — captain manatee"><img src="assets/naples/naples-manatee-captain.png" alt="Captain manatee mascot" loading="lazy"></button>
+        <button data-image="assets/naples/naples-manatee-golf.png" data-caption="Only In Naples — golf manatee"><img src="assets/naples/naples-manatee-golf.png" alt="Golf manatee mascot" loading="lazy"></button>
+        <button data-image="assets/naples/only-in-naples-instagram-sample.png" data-caption="Only In Naples — Instagram merch sample"><img src="assets/naples/only-in-naples-instagram-sample.png" alt="Instagram merch sample" loading="lazy"></button>
+      </div>
+      <div class="case-actions centered" data-reveal>
+        <button class="button button-dark" type="button" data-modal-open="naples">Open project</button>
+        <button class="button button-ghost" type="button" data-inquiry-open>Start project</button>
+      </div>
+    </section>
+
+    <section id="method" class="section method-section" aria-labelledby="method-title">
+      <div class="section-head compact" data-reveal>
+        <p class="eyebrow">Method</p>
+        <h2 id="method-title">The build process is simple on purpose.</h2>
+        <p>Start with the ticket. Understand what broke or what needs to improve. Use AI to accelerate the solve. Test it live. Keep the interface clear.</p>
+      </div>
+      <div class="method-list" data-reveal>
+        <article><span>01</span><h3>Read the ticket</h3><p>Understand the issue, expected behavior, user impact, and where the change lives.</p></article>
+        <article><span>02</span><h3>Map the solve</h3><p>Use Claude and product logic to reason through the path before changing the product.</p></article>
+        <article><span>03</span><h3>Build + test</h3><p>Implement the solution, test it live, and check whether the user path still makes sense.</p></article>
+        <article><span>04</span><h3>Document the proof</h3><p>Keep the reasoning clear enough for GitHub, teammates, and future iterations.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="contact-card" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Have a product problem that needs a clearer path?</h2>
+        <p>Send the basics. I’ll help break it down into the ticket, the user impact, the likely solution path, and the version worth testing.</p>
+        <div class="contact-actions">
+          <button class="button button-paper" type="button" data-inquiry-open>Start project</button>
+          <a class="button button-outline-paper" href="mailto:adoblake@gmail.com">Email directly</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Adonnis Blake</span>
+    <span>Built through active iteration with product engineering, AI assistance, UI/UX, and code.</span>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+    <div class="modal-backdrop" data-modal-close></div>
+    <article class="modal-panel" role="document">
+      <button class="modal-close" type="button" data-modal-close>Close</button>
+      <p class="eyebrow" id="projectModalKicker"></p>
+      <h2 id="projectModalTitle"></h2>
+      <p id="projectModalIntro"></p>
+      <div class="modal-meta" id="projectModalMeta"></div>
+      <div class="modal-body" id="projectModalBody"></div>
+      <div class="examples-shell" id="modalExamplesShell">
+        <div class="examples-line">
+          <div><p class="eyebrow">Visual examples</p><p id="projectModalExamplesNote">Open the examples only when you want the full proof board.</p></div>
+          <button class="button button-dark" type="button" id="modalExamplesToggle" aria-expanded="false">More</button>
+        </div>
+        <div class="examples-panel" id="projectModalExamples" aria-hidden="true"></div>
+      </div>
+      <div class="modal-actions" id="projectModalActions"></div>
+    </article>
+  </div>
+
+  <div class="modal image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="modal-backdrop" data-image-close></div>
+    <figure class="image-panel">
+      <button class="modal-close" type="button" data-image-close>Close</button>
+      <img id="imageModalImg" alt="" />
+      <figcaption id="imageModalCaption"></figcaption>
+    </figure>
+  </div>
+
+  <div class="modal inquiry-modal" id="inquiryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inquiryTitle">
+    <div class="modal-backdrop" data-inquiry-close></div>
+    <article class="modal-panel inquiry-panel" role="document">
+      <button class="modal-close" type="button" data-inquiry-close>Close</button>
+      <p class="eyebrow">Start a project</p>
+      <h2 id="inquiryTitle">Send the basics.</h2>
+      <p>Nothing overcomplicated. Tell me what you’re building, what kind of help you need, and where the project stands.</p>
+      <form id="inquiryForm" class="inquiry-form">
+        <label>Name<input name="name" type="text" required placeholder="Your name" /></label>
+        <label>Email<input name="email" type="email" required placeholder="you@email.com" /></label>
+        <label>Project type<select name="type"><option>Product engineering / UI UX</option><option>Brand identity</option><option>Website / landing page</option><option>Creative direction / brand system</option><option>Not sure yet</option></select></label>
+        <label>Timeline<select name="timeline"><option>Just exploring</option><option>This month</option><option>1–3 months</option><option>3+ months</option></select></label>
+        <label>Budget / scope<select name="budget"><option>Small focused pass</option><option>Medium project</option><option>Large / ongoing build</option><option>Need help scoping</option></select></label>
+        <label class="full">Message<textarea name="message" rows="5" required placeholder="What are you trying to make? What should people understand?" ></textarea></label>
+        <button class="button button-dark full" type="submit">Prepare email</button>
+      </form>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
