@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Adonnis Blake</title>
+  <meta name="description" content="About Adonnis Blake — Product Engineer, UI/UX designer, concept artist, TurboVets product work, Claude-assisted GitHub ticket solving, and live testing." />
+  <link rel="icon" type="image/png" href="assets/brand/adonnis-brand-icon.png" />
+  <link rel="apple-touch-icon" href="assets/brand/adonnis-brand-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="about-page">
+  <a class="skip" href="#story">Skip to story</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header" data-reveal>
+    <a class="brand" href="index.html#top" aria-label="Adonnis Blake home">
+      <span class="brand-mark"><img src="assets/brand/adonnis-brand-icon.png" alt="" /></span>
+      <span class="brand-copy"><strong>Adonnis Blake</strong><small>Product Engineer · AI Build · UX</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#method">Method</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Dark</button>
+      <button class="button button-dark nav-project-button" type="button" data-inquiry-open>Start project</button>
+    </nav>
+    <button class="menu-button" type="button" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+  </header>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#method">Method</a>
+    <a href="about.html">About</a>
+    <a href="index.html#contact">Contact</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Dark</button>
+    <button class="button button-dark" type="button" data-inquiry-open>Start project</button>
+  </nav>
+
+  <main>
+    <section class="hero about-hero" id="story">
+      <div class="about-copy" data-reveal>
+        <p class="eyebrow">About</p>
+        <h1>A Product Engineer with a concept-art brain and a designer’s eye.</h1>
+        <p class="lead">Hello! I’m Adonnis. I have a deep passion for art, a Bachelor’s Degree in Concept Art from Collins College, and a current focus on product engineering, UI/UX systems, Claude-assisted problem solving, and live product testing.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="index.html#work">View work</a>
+          <button class="button button-ghost" type="button" data-inquiry-open>Start a project</button>
+        </div>
+      </div>
+      <aside class="about-panel" data-reveal>
+        <img src="assets/profile/adonnis-portrait.jpg" alt="Portrait of Adonnis Blake" />
+        <p>I’m strongest when I can help turn a problem ticket, loose product idea, or unclear workflow into something people can understand, test, and build on.</p>
+      </aside>
+    </section>
+
+    <section class="section about-section" data-reveal>
+      <div><p class="eyebrow">Current focus</p><h2>Product engineering at TurboVets.</h2></div>
+      <div>
+        <p>At TurboVets, my focus has moved into Product Engineering. I’m working closer to the actual problem-solving side of the product: reading GitHub tickets, understanding the expected behavior, using Claude to reason through solutions, and live-testing changes so the product behaves the way people need it to.</p>
+        <p>That still includes UI/UX thinking, flows, hierarchy, and feature clarity, but design is now the support system under the engineering work. My graphic design and concept art background helps me spot clarity issues, while LEAN principles help me keep the process structured and practical.</p>
+      </div>
+    </section>
+
+    <section class="section about-section" data-reveal>
+      <div><p class="eyebrow">New adventure</p><h2>Learning product engineering and AI-assisted building in public.</h2></div>
+      <div>
+        <p>This portfolio is part of the learning process. It was not treated as a one-shot static design. It was built through rounds: layout critique, visual direction, project additions, modal interactions, image galleries, case-study structure, About page, inquiry flow, dark/light mode, and new positioning as my title shifted into Product Engineer.</p>
+        <p>The process mirrors how I’m approaching this new chapter: read the problem, research the system, use AI to accelerate the solve, test the result, simplify the experience, and keep moving. I’m continuously searching for better education around product engineering, GitHub workflows, UI/UX, AI tooling, and how creative people can use these tools without losing their own style.</p>
+      </div>
+    </section>
+
+    <section class="section about-section" data-reveal>
+      <div><p class="eyebrow">How I work</p><h2>Product first. Design clarity always.</h2></div>
+      <div>
+        <p>Art is still at the heart of how I see things, but my current work is increasingly about whether the product functions, whether the logic makes sense, and whether the user can complete the task without friction. I love the challenge of combining build logic with design clarity.</p>
+        <p>I thrive in team environments because good work gets sharper through conversation, tickets, testing, review, and iteration. My goal is to keep evolving: learn the engineering side deeply, use AI responsibly, and build work that feels clear, useful, and human.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" aria-labelledby="about-contact-title">
+      <div class="contact-card" data-reveal>
+        <p class="eyebrow">Next</p>
+        <h2 id="about-contact-title">Let’s make the product problem easier to solve.</h2>
+        <p>Product ticket, workflow issue, UI/UX path, website structure, or a messy concept that needs shape — send the basics.</p>
+        <div class="contact-actions">
+          <button class="button button-paper" type="button" data-inquiry-open>Start project</button>
+          <a class="button button-outline-paper" href="mailto:adoblake@gmail.com">Email directly</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Adonnis Blake</span>
+    <a href="index.html#top">Home</a>
+  </footer>
+
+  <div class="modal inquiry-modal" id="inquiryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inquiryTitle">
+    <div class="modal-backdrop" data-inquiry-close></div>
+    <article class="modal-panel inquiry-panel" role="document">
+      <button class="modal-close" type="button" data-inquiry-close>Close</button>
+      <p class="eyebrow">Start a project</p>
+      <h2 id="inquiryTitle">Send the basics.</h2>
+      <p>Nothing overcomplicated. Tell me what you’re building, what kind of help you need, and where the project stands.</p>
+      <form id="inquiryForm" class="inquiry-form">
+        <label>Name<input name="name" type="text" required placeholder="Your name" /></label>
+        <label>Email<input name="email" type="email" required placeholder="you@email.com" /></label>
+        <label>Project type<select name="type"><option>Product engineering / UI UX</option><option>Brand identity</option><option>Website / landing page</option><option>Creative direction / brand system</option><option>Not sure yet</option></select></label>
+        <label>Timeline<select name="timeline"><option>Just exploring</option><option>This month</option><option>1–3 months</option><option>3+ months</option></select></label>
+        <label>Budget / scope<select name="budget"><option>Small focused pass</option><option>Medium project</option><option>Large / ongoing build</option><option>Need help scoping</option></select></label>
+        <label class="full">Message<textarea name="message" rows="5" required placeholder="What are you trying to make? What should people understand?" ></textarea></label>
+        <button class="button button-dark full" type="submit">Prepare email</button>
+      </form>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
