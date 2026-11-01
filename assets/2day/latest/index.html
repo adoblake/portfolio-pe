@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2DAY Apps — Latest Working Preview</title>
+  <style>
+    :root{--orange:#F15A29;--black:#000;--dark:#1E1E1E;--card:#242424;--text:#fff;--muted:#8f99a8;--line:#343434;--radius:28px;font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;color-scheme:dark;}
+    [data-theme="light"]{--black:#f7f7f2;--dark:#fff;--card:#f0f0ed;--text:#151515;--muted:#6f6f69;--line:#deded8;color-scheme:light;}
+    *{box-sizing:border-box}body{margin:0;background:#3a3a3a;min-height:100vh;display:grid;place-items:center;color:var(--text);font-family:inherit}.phone{width:min(430px,100vw);height:min(860px,100vh);background:var(--black);border-radius:34px;overflow:hidden;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.36);border:1px solid rgba(255,255,255,.08)}.screen{display:none;height:100%;padding:34px 28px 110px;overflow:auto}.screen.active{display:block}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}.logo{width:48px;height:48px;border-radius:50%;background:var(--orange);display:grid;place-items:center;color:#fff;font-weight:900;font-size:24px}.theme{border:1px solid var(--line);background:var(--dark);color:var(--text);height:42px;padding:0 14px;border-radius:999px;font-weight:800}h1{font-size:34px;line-height:1.02;letter-spacing:-.05em;margin:0 0 8px}p{color:var(--muted);line-height:1.45;margin:0}.card{background:var(--dark);border:1px solid var(--line);border-radius:24px;padding:20px;margin:14px 0}.score{display:flex;align-items:center;gap:18px}.big{font-size:56px;color:var(--orange);font-weight:900;letter-spacing:-.08em}.bar{height:26px;border-radius:999px;background:#000;margin:18px 0 10px;overflow:hidden;border:1px solid var(--line)}[data-theme="light"] .bar{background:#e5e5df}.bar span{display:block;height:100%;width:48%;background:var(--orange);border-radius:inherit}.button{width:100%;border:0;background:var(--orange);color:white;border-radius:20px;padding:18px 20px;font-size:16px;font-weight:900;margin-top:14px}.task{display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start}.check{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:#fff;background:#000;font-weight:900}.done .check{background:var(--orange);border-color:var(--orange)}.task h3{margin:0 0 4px;font-size:17px}.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.seg button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:13px 8px;font-weight:900}.seg button.selected{background:var(--orange);border-color:var(--orange);color:white}.nav{position:absolute;left:0;right:0;bottom:0;height:92px;background:var(--dark);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);align-items:center}.nav button{height:100%;border:0;background:transparent;color:var(--muted);font-weight:800;display:grid;place-items:center}.nav button.active{color:var(--orange)}.nav span{font-size:22px;display:block}.mini{font-size:12px;letter-spacing:.01em}.muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="phone" aria-label="2DAY latest working preview">
+    <section class="screen active" id="home">
+      <div class="top"><div><h1>2DAY</h1><p>Simple path. Do today.</p></div><button class="theme" data-theme>Light</button></div>
+      <article class="card score"><div class="big">72</div><div><h3>Today’s scoreboard</h3><p>Good enough to execute. No overthinking.</p></div></article>
+      <article class="card"><h3>Your path</h3><p>Current: Heavy → Goal: Fit</p><div class="bar"><span></span></div><p class="muted">12-week path · Week 3</p></article>
+      <article class="card"><h3>Meal focus</h3><p>Protein + veggie + water. Keep meals understandable.</p></article>
+      <button class="button" data-go="day">Open today’s plan</button>
+    </section>
+    <section class="screen" id="day">
+      <div class="top"><div><h1>Day</h1><p>Do these. Then stop negotiating.</p></div><button class="theme" data-theme>Light</button></div>
+      <article class="card task done"><div class="check">✓</div><div><h3>Breakfast</h3><p>Eggs or Greek yogurt. Water.</p></div></article>
+      <article class="card task done"><div class="check">✓</div><div><h3>Lunch</h3><p>Chicken bowl. No mystery sauce.</p></div></article>
+      <article class="card task"><div class="check"></div><div><h3>Dinner</h3><p>Protein. Veg. Smaller carb.</p></div></article>
+      <article class="card task"><div class="check"></div><div><h3>Move</h3><p>Walk 20 minutes.</p></div></article>
+    </section>
+    <section class="screen" id="setup">
+      <div class="top"><div><h1>Setup</h1><p>Tell the app where you are.</p></div><button class="theme" data-theme>Light</button></div>
+      <article class="card"><h3>Current body type</h3><p>Pick what feels closest right now.</p><div class="seg"><button>Skinny</button><button>Mid</button><button class="selected">Heavy</button></div></article>
+      <article class="card"><h3>Desired body type</h3><p>Where are we trying to go?</p><div class="seg"><button>Thin</button><button class="selected">Fit</button><button>Built</button></div></article>
+      <article class="card"><h3>Timeframe</h3><p>Choose the path length.</p><div class="seg"><button>4w</button><button>8w</button><button class="selected">12w</button></div></article>
+    </section>
+    <nav class="nav" aria-label="Preview navigation"><button class="active" data-screen="home"><span>⌂</span><small>Home</small></button><button data-screen="day"><span>✓</span><small>Day</small></button><button data-screen="setup"><span>◎</span><small>Setup</small></button></nav>
+  </main>
+  <script>
+    const root=document.documentElement;
+    document.addEventListener('click', e=>{
+      const nav=e.target.closest('[data-screen],[data-go]');
+      if(nav){ const id=nav.dataset.screen||nav.dataset.go; document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id)); document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.screen===id)); }
+      if(e.target.closest('[data-theme]')){ const next=root.dataset.theme==='dark'?'light':'dark'; root.dataset.theme=next; document.querySelectorAll('[data-theme]').forEach(b=>b.textContent=next==='dark'?'Light':'Dark'); }
+    });
+  </script>
+</body>
+</html>

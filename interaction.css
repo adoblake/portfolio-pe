@@ -1,0 +1,44 @@
+/* Round 31.7: additive enhancement; preserve Round 31.6.4 layout. */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.language-control{display:inline-flex;align-items:center;max-width:125px;position:relative;margin:0 4px}
+.language-control select{appearance:none;max-width:125px;border:1px solid var(--line);border-radius:999px;padding:10px 27px 10px 11px;color:var(--ink);background:var(--soft);font-family:var(--font-sans);font-size:12px;font-weight:750;cursor:pointer;letter-spacing:.04em}
+.language-control:after{content:'⌄';font-size:14px;right:10px;top:50%;transform:translateY(-57%);position:absolute;pointer-events:none;color:var(--ink)}
+.language-control select:focus-visible{outline:2px solid #ef7c26;outline-offset:3px}
+.mobile-nav .language-control{margin:5px 10px}.mobile-nav .language-control select{width:100%;max-width:100%}
+@media(min-width:1181px){.workflow-visual{position:sticky;top:112px;align-self:start}}
+.workflow-code-lines li{transition:background .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease),opacity .35s}
+.workflow-code-lines li:not(.is-current){opacity:.63}
+.workflow-code-lines li.is-current{background:rgba(243,117,28,.17);border-color:rgba(243,117,28,.55);transform:translateX(5px);opacity:1}
+.workflow-tab{transition:border-color .3s ease,background .3s ease}
+.workflow-tab.is-current{border-color:rgba(243,117,28,.4)}
+.workflow-tab summary{cursor:pointer}
+.workflow-tab:focus-within{outline:2px solid transparent}
+.workflow-tab summary:focus-visible{outline:2px solid #ef7c26;outline-offset:2px;border-radius:20px}
+.hero-device{overflow:hidden;isolation:isolate}
+.hero-device>img[data-hero-parallax]{transform:translate3d(0,var(--hero-shift,0px),0) scale(1.07);transition:transform .3s linear;will-change:transform}
+@media(hover:hover) and (pointer:fine){
+ .project-visual.has-image img,.neighbor-preview-strip img{transition:transform .65s var(--ease),filter .65s var(--ease)}
+ .project-card:hover .project-visual.has-image>img{transform:scale(1.025)}
+ .project-card:hover .neighbor-preview-strip img:first-child{transform:translateY(-5px)}
+ .project-card:hover .neighbor-preview-strip img:last-child{transform:translateY(5px)}
+ .project-card:hover .visual-society .society-mini{transform:translateY(-5px)}
+}
+/* Long translations need flexible lines and never cause horizontal scrolling. */
+.workflow-tab summary strong,.project-info h3,.section-head h2,.hero h1,.about-copy h1{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:1180px){.workflow-visual{position:static}}
+@media(max-width:780px){.mobile-nav{max-height:calc(100dvh - 104px);overflow-y:auto}.language-control{max-width:unset}}
+@media(prefers-reduced-motion:reduce){.hero-device>img[data-hero-parallax]{transform:none!important;will-change:auto}.workflow-code-lines li,.project-visual img{transition:none!important;transform:none!important}}
+/* Project details remain a centered editorial modal in all languages. */
+.modal.is-open{place-items:center}
+.modal-panel{border-radius:30px;max-height:min(92dvh,1000px)}
+.image-panel{position:relative;width:min(1000px,calc(100% - 28px));max-height:90dvh;padding:48px 20px 20px;border-radius:28px;background:var(--paper);overflow:auto}
+.image-panel img{width:100%;max-height:72dvh;object-fit:contain;display:block}
+.image-panel figcaption{margin:12px 0 0;text-align:center;color:var(--muted)}
+.examples-panel{display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.examples-panel.is-open{display:grid}
+.examples-panel img{width:100%;height:240px;object-fit:contain;background:var(--soft);border-radius:18px;padding:10px}
+.examples-line{display:flex;align-items:center;justify-content:space-between;gap:22px;border-top:1px solid var(--line);padding-top:18px;margin-top:25px}
+.examples-line p{margin:0;color:var(--muted);line-height:1.5}
+.examples-line .eyebrow{margin:0 0 4px;color:var(--ink)}
+[hidden]{display:none!important}
+@media(max-width:700px){.modal-panel{padding:55px 24px 28px}.inquiry-form{grid-template-columns:1fr}.examples-panel{grid-template-columns:1fr}.examples-panel img{height:210px}}
