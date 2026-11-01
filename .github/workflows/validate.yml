@@ -1,0 +1,19 @@
+name: Validate portfolio
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify JavaScript syntax
+        run: |
+          node --check script.js
+          node --check i18n.js
+          node --check assets/society5ive/script.js
+      - name: Check local HTML links and assets
+        run: python3 check-site.py
