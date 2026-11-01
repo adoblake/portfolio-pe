@@ -1,0 +1,173 @@
+/* Round 31.8 — clear, text-led navigation for both themes. */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(12px, 2vw, 30px);
+  width: 100%;
+  margin: 0;
+  padding: 12px 32px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Keep the identity without the hard-to-read gray container. */
+.site-header .brand {
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  backdrop-filter: none;
+}
+.site-header .brand-copy strong { color: var(--ink); }
+.site-header .brand-copy small {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .11em;
+}
+
+/* All links and actions read as text; no grouped pill or button fills. */
+.site-header .site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(14px, 1.5vw, 28px);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+.site-header .site-nav a,
+.site-header .site-nav .nav-project-button,
+.site-header .site-nav .theme-toggle {
+  flex: 0 0 auto;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.site-header .site-nav a:hover,
+.site-header .site-nav .nav-project-button:hover,
+.site-header .site-nav .theme-toggle:hover,
+.mobile-nav a:hover,
+.mobile-nav .theme-toggle:hover,
+.mobile-nav .button-dark:hover {
+  background: transparent;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+.site-header .site-nav a:focus-visible,
+.site-header .site-nav button:focus-visible,
+.site-header .site-nav select:focus-visible,
+.site-header .brand:focus-visible,
+.menu-button:focus-visible,
+.mobile-nav a:focus-visible,
+.mobile-nav button:focus-visible,
+.mobile-nav select:focus-visible {
+  outline: 2px solid #ef7c26;
+  outline-offset: 4px;
+}
+
+/* Theme and language selectors remain usable without separate capsules. */
+.site-header .language-control,
+.mobile-nav .language-control { margin: 0; }
+.site-header .language-control select,
+.mobile-nav .language-control select {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  cursor: pointer;
+}
+.site-header .language-control select { max-width: 95px; padding: 8px 18px 8px 0; }
+.site-header .language-control::after,
+.mobile-nav .language-control::after { color: var(--ink); right: 2px; }
+.language-control option { background: var(--paper); color: var(--ink); }
+
+/* On small screens, the menu is one readable panel of plain words. */
+.site-header .menu-button {
+  flex: 0 0 auto;
+  display: none;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.mobile-nav {
+  top: 68px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+.mobile-nav a,
+.mobile-nav .theme-toggle,
+.mobile-nav .button-dark {
+  width: fit-content;
+  min-height: 40px;
+  padding: 10px 2px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+.mobile-nav .language-control { width: fit-content; padding: 10px 2px; }
+.mobile-nav .language-control select { max-width: 140px; padding: 8px 18px 8px 0; }
+
+@media (max-width: 1180px) {
+  .site-header { padding: 12px 24px; }
+  .site-header .site-nav { display: none; }
+  .site-header .menu-button { display: inline-flex; }
+  .mobile-nav { left: 24px; right: 24px; }
+}
+@media (max-width: 780px) {
+  .site-header { width: 100%; margin: 0; padding: 10px 16px; }
+  .site-header .menu-button { background: transparent; backdrop-filter: none; }
+  .site-header .brand-copy small { display: none; }
+  .site-header .brand-mark { width: 34px; height: 34px; }
+  .site-header .brand-copy strong { font-size: 14px; }
+  .mobile-nav { top: 58px; left: 12px; right: 12px; }
+}
