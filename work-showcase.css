@@ -1,0 +1,326 @@
+/* Round 31.9 — compact, image-led Selected Work.
+   Card artwork is assembled from existing project assets; no other page sections change. */
+
+.work-section .work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(14px, 1.5vw, 24px);
+  margin-top: 22px;
+}
+
+.work-section .project-card,
+.work-section .project-card:nth-child(3n),
+.work-section .project-card:nth-child(3n + 1) {
+  grid-column: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0 !important;
+  height: auto;
+  overflow: hidden;
+}
+
+.work-section .project-info {
+  order: 1;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 198px !important;
+  padding: clamp(20px, 2vw, 30px);
+  border-bottom: 1px solid var(--line);
+}
+
+.work-section .project-info > p {
+  min-height: 0;
+  margin: 0 0 12px;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .13em;
+}
+
+.work-section .project-info > h3 {
+  margin: 0 0 9px;
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 45px);
+  line-height: .98;
+  letter-spacing: -.045em;
+  overflow-wrap: break-word;
+}
+
+.work-section .project-info > span {
+  display: block;
+  max-width: 60ch;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.48;
+  color: var(--muted);
+}
+
+.work-section .project-info .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.work-section .project-visual {
+  order: 2;
+  flex: 0 0 clamp(250px, 21vw, 330px);
+  position: relative;
+  display: block;
+  width: 100%;
+  height: clamp(250px, 21vw, 330px);
+  min-height: 0 !important;
+  max-height: 330px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.work-section .project-visual img {
+  min-height: 0 !important;
+}
+
+/* 2DAY: authentic app screen, cropped to the relevant product experience. */
+.work-section .visual-twoday {
+  background: radial-gradient(ellipse at 70% 32%, #242220, #0a0a0a 70%);
+}
+
+.work-section .visual-twoday::before {
+  content: "2DAY";
+  position: absolute;
+  left: 6%;
+  top: 42%;
+  z-index: 0;
+  color: rgba(255, 255, 255, .09);
+  font-family: var(--font-sans);
+  font-size: clamp(80px, 11vw, 178px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.09em;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.work-section .visual-twoday::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  bottom: 18%;
+  width: 23%;
+  height: 5px;
+  border-radius: 100px;
+  background: #ff951c;
+  pointer-events: none;
+}
+
+.work-section .visual-twoday > img {
+  position: absolute;
+  right: 9%;
+  top: 13px;
+  width: min(43%, 300px) !important;
+  height: auto !important;
+  max-height: none;
+  padding: 0 !important;
+  object-fit: contain;
+  object-position: top;
+  border: 1px solid #353535;
+  border-radius: 16px 16px 0 0;
+  box-shadow: -16px 20px 35px rgba(0, 0, 0, .44);
+}
+
+/* Society 5ive: an editorial web layout rather than an empty loading skeleton. */
+.work-section .visual-society {
+  display: grid;
+  place-items: stretch;
+  padding: 18px !important;
+  background: #d9d3c8;
+}
+
+.work-section .visual-society .society-mini {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 18px 20px;
+  gap: 14px;
+  border: 1px solid rgba(15, 15, 15, .13);
+  border-radius: 12px;
+  background: #f5f2eb;
+  transform: none;
+}
+
+.society-preview-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 15, 15, .15);
+}
+.work-section .visual-society .society-preview-masthead strong {
+  font-family: var(--font-serif);
+  font-size: clamp(25px, 3.1vw, 42px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.045em;
+  margin: 0;
+  white-space: nowrap;
+  color: #191815;
+}
+.society-preview-masthead i {
+  width: 56px;
+  height: 1px;
+  flex: 0 0 56px;
+  background: rgba(15,15,15,.4);
+}
+.society-preview-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+.society-preview-feature,
+.society-preview-side i {
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.society-preview-feature {
+  position: relative;
+  background:
+    linear-gradient(115deg, transparent 54%, rgba(33,39,37,.09) 54% 59%, transparent 60%),
+    linear-gradient(0deg, #8f938b 0 15%, transparent 15%),
+    linear-gradient(90deg, #c5c2b8 0 25%, #dedbd4 25% 73%, #b7b8b0 73%);
+}
+.society-preview-feature::before {
+  content: "";
+  position: absolute;
+  width: 47%;
+  height: 74%;
+  top: 13%;
+  left: 23%;
+  border-radius: 50% 50% 0 0;
+  background: #888b83;
+  box-shadow: inset 10px 0 0 rgba(255,255,255,.2), inset -14px 0 0 rgba(0,0,0,.05);
+}
+.society-preview-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+.society-preview-side i:first-child {
+  background: linear-gradient(135deg, #b9a897 0 42%, #e3dbcf 42% 65%, #aaa18f 65%);
+}
+.society-preview-side i:last-child {
+  background: linear-gradient(115deg, #c8c4b8 0 36%, #eeebe5 36% 63%, #93948b 63%);
+}
+
+/* Only In Naples: three real character variants arranged as a brand collection. */
+.work-section .visual-mascot {
+  background: #12222e;
+}
+.work-section .visual-mascot .naples-preview-gallery {
+  display: grid;
+  grid-template-columns: 1.14fr .9fr .9fr;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+.work-section .visual-mascot .naples-preview-gallery img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100%;
+  padding: 0 !important;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 9px;
+  background: #f7f5ef;
+}
+.work-section .visual-mascot .naples-preview-gallery img:first-child {
+  object-position: center 9%;
+}
+
+/* Neighbors: full-size wordmark alongside two real-world signage photos. */
+.work-section .visual-neighbor {
+  display: block;
+  padding: 0 !important;
+  background: #050505;
+}
+.work-section .visual-neighbor .neighbor-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  gap: 14px;
+  padding: clamp(18px, 2.1vw, 32px);
+}
+.work-section .visual-neighbor .neighbor-wordmark {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 90%;
+  min-height: 0 !important;
+  padding: 0 !important;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 16px rgba(0,0,0,.5));
+}
+.work-section .visual-neighbor .neighbor-preview-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 78%;
+  min-height: 0;
+  gap: 10px;
+}
+.work-section .visual-neighbor .neighbor-preview-strip img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+}
+
+/* All artwork frames preserve the existing project interaction and image links. */
+.work-section .project-visual .project-number {
+  z-index: 5;
+}
+@media (max-width: 860px) {
+  .work-section .work-grid { grid-template-columns: 1fr; }
+  .work-section .project-info { min-height: 0 !important; }
+  .work-section .project-visual {
+    flex-basis: clamp(220px, 55vw, 315px);
+    height: clamp(220px, 55vw, 315px);
+  }
+  .work-section .visual-twoday > img { right: 11%; }
+}
+@media (max-width: 420px) {
+  .work-section .project-info { padding: 22px; }
+  .work-section .visual-neighbor .neighbor-preview {
+    grid-template-columns: .8fr 1fr;
+    gap: 8px;
+    padding: 16px;
+  }
+  .work-section .visual-neighbor .neighbor-preview-strip { gap: 6px; }
+  .work-section .visual-mascot .naples-preview-gallery { gap: 6px; padding: 10px; }
+  .work-section .visual-society { padding: 10px !important; }
+  .work-section .visual-society .society-mini { padding: 12px; }
+  .society-preview-masthead i { display: none; }
+}
