@@ -92,13 +92,17 @@ body,
   }
 }
 .contact-card .button-paper,
-.contact-card .button-dark {
+.contact-card .button-paper:hover,
+.contact-card .button-dark,
+.contact-card .button-dark:hover {
   background: var(--paper);
   border-color: var(--paper);
   color: var(--ink);
 }
 .contact-card .button-outline-paper,
-.contact-card .button-ghost {
+.contact-card .button-outline-paper:hover,
+.contact-card .button-ghost,
+.contact-card .button-ghost:hover {
   background: transparent;
   border-color: var(--paper);
   color: var(--paper);
@@ -135,8 +139,6 @@ body,
 /* Dynamic actions, including focus, open dialogs, filters and the language menu.
    Do not rely on the user agent's default dark-text button styling. */
 .modal-close,
-.modal-actions button,
-#modalExamplesToggle,
 .inquiry-form label,
 .inquiry-form input,
 .inquiry-form select,
@@ -163,6 +165,14 @@ body,
 .inquiry-form textarea:-webkit-autofill {
   -webkit-text-fill-color: var(--text-on-surface);
   box-shadow: 0 0 0 1000px var(--paper) inset;
+}
+
+/* The disclosure toggle uses the inverse button class inside a neutral modal. */
+#modalExamplesToggle,
+#modalExamplesToggle:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
 }
 
 /* Ensure shared button variants retain their intended contrast on hover,
