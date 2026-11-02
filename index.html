@@ -14,7 +14,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <link href="assets/brand/adonnis-brand-icon.png" rel="apple-touch-icon"/>
 <link as="image" href="assets/profile/adonnis-portrait.jpg" rel="preload"/>
 <link href="styles.css" rel="stylesheet"/><link href="interaction.css" rel="stylesheet"/><link href="navigation.css" rel="stylesheet"/><link href="work-showcase.css" rel="stylesheet"/><link href="scroll-story.css" rel="stylesheet"/>
-<link href="theme-contrast.css" rel="stylesheet"/>
+<link href="theme-contrast.css" rel="stylesheet"/><link href="studio-polish.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" data-i18n="Skip to work" href="#work">Skip to work</a>
@@ -22,7 +22,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <header class="site-header" data-reveal="">
 <a aria-label="Adonnis Blake home" class="brand" href="index.html#top">
 <span class="brand-mark"><img alt="" src="assets/brand/adonnis-brand-icon.png"/></span>
-<span class="brand-copy"><strong>Adonnis Blake</strong><small data-i18n="Product Engineer · AI Build · UX">Product Engineer · AI Build · UX</small></span>
+<span class="brand-copy"><strong>Adonnis Blake</strong><small data-i18n="Product Engineer · Design · Art">Product Engineer · Design · Art</small></span>
 </a>
 <nav aria-label="Primary navigation" class="site-nav">
 <a data-i18n="Work" href="#work">Work</a>
@@ -47,7 +47,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <div class="hero-copy" data-reveal="">
 <p class="eyebrow" data-i18n="Portfolio / 2026">Portfolio / 2026</p>
 <h1 data-i18n="Product engineering that gets understood fast.">Product engineering that gets understood fast.</h1>
-<p class="lead" data-i18n="I’m Adonnis Blake — a Product Engineer turning problem tickets into shipped, tested product solutions with Claude, GitHub, live testing, and a designer’s eye for clarity.">I’m Adonnis Blake — a Product Engineer turning problem tickets into shipped, tested product solutions with Claude, GitHub, live testing, and a designer’s eye for clarity.</p>
+<p class="lead" data-i18n="I’m Adonnis Blake — a Product Engineer grounded in concept art, graphic design, and UI/UX. I bring visual thinking to real product problems, using Claude, GitHub, and live testing to build experiences that work and make sense.">I’m Adonnis Blake — a Product Engineer grounded in concept art, graphic design, and UI/UX. I bring visual thinking to real product problems, using Claude, GitHub, and live testing to build experiences that work and make sense.</p>
 <div class="hero-actions">
 <a class="button button-dark" data-i18n="View selected work" href="#work">View selected work</a>
 <button class="button button-ghost" data-i18n="Start a project" data-inquiry-open="" type="button">Start a project</button>
@@ -66,14 +66,30 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <section aria-labelledby="quick-read-title" class="section quick-read">
 <div class="section-head compact" data-reveal="">
 <p class="eyebrow" data-i18n="The quick read">The quick read</p>
-<h2 data-i18n="A product engineer with a designer’s eye." id="quick-read-title">A product engineer with a designer’s eye.</h2>
-<p data-i18n="Simple first. More detail when it helps. My focus has shifted toward product engineering: reading the ticket, using Claude to move faster, testing the solution live, and keeping the experience clear enough for real users to understand.">Simple first. More detail when it helps. My focus has shifted toward product engineering: reading the ticket, using Claude to move faster, testing the solution live, and keeping the experience clear enough for real users to understand.</p>
+<h2 data-i18n="A product engineer built on a creative foundation." id="quick-read-title">A product engineer built on a creative foundation.</h2>
+<p data-i18n="I learned to communicate through images, stories, and interfaces before I wrote product code. That perspective shapes how I read tickets, map user journeys, work with AI, and test what people actually experience.">I learned to communicate through images, stories, and interfaces before I wrote product code. That perspective shapes how I read tickets, map user journeys, work with AI, and test what people actually experience.</p>
 </div>
 <div aria-label="Core creative lanes" class="feature-strip quick-lanes" data-reveal="">
 <article><span>01</span><h3 data-i18n="Product engineering">Product engineering</h3><p data-i18n="Turning real tickets into product fixes, working behavior, and testable improvements.">Turning real tickets into product fixes, working behavior, and testable improvements.</p></article>
-<article><span>02</span><h3 data-i18n="AI-assisted solving">AI-assisted solving</h3><p data-i18n="Using Claude as a build partner to reason through code, edge cases, and solution paths.">Using Claude as a build partner to reason through code, edge cases, and solution paths.</p></article>
-<article><span>03</span><h3 data-i18n="Live testing">Live testing</h3><p data-i18n="Checking changes against the actual product so the work moves past theory into proof.">Checking changes against the actual product so the work moves past theory into proof.</p></article>
-<article><span>04</span><h3 data-i18n="Design clarity">Design clarity</h3><p data-i18n="Keeping UI/UX, hierarchy, and user understanding as the quality bar underneath the code.">Keeping UI/UX, hierarchy, and user understanding as the quality bar underneath the code.</p></article>
+<article><span>02</span><h3 data-i18n="Art + design thinking">Art + design thinking</h3><p data-i18n="Concept art, comics, and UX trained me to see the whole journey — not just a screen or line of code.">Concept art, comics, and UX trained me to see the whole journey — not just a screen or line of code.</p></article>
+<article><span>03</span><h3 data-i18n="AI-assisted solving">AI-assisted solving</h3><p data-i18n="Using Claude as a build partner to reason through code, edge cases, and solution paths.">Using Claude as a build partner to reason through code, edge cases, and solution paths.</p></article>
+<article><span>04</span><h3 data-i18n="Live testing">Live testing</h3><p data-i18n="Checking changes against the actual product so the work moves past theory into proof.">Checking changes against the actual product so the work moves past theory into proof.</p></article>
+</div>
+</section>
+<section aria-labelledby="creative-foundation-title" class="section creative-foundation">
+<div class="creative-grid" data-reveal="">
+<div class="creative-copy">
+<p class="eyebrow" data-i18n="Creative foundation">Creative foundation</p>
+<h2 id="creative-foundation-title" data-i18n="I learned to build worlds before I built products.">I learned to build worlds before I built products.</h2>
+</div>
+<div class="creative-support">
+<p data-i18n="Drawing, comics, anime, and sci-fi made me curious about how worlds work. Design taught me to turn that curiosity into hierarchy, flows, and visual clarity. Engineering lets me make those ideas useful — and test whether they work.">Drawing, comics, anime, and sci-fi made me curious about how worlds work. Design taught me to turn that curiosity into hierarchy, flows, and visual clarity. Engineering lets me make those ideas useful — and test whether they work.</p>
+<ol class="creative-path">
+<li><span>01</span><strong data-i18n="Concept art">Concept art</strong></li>
+<li><span>02</span><strong>UI/UX</strong></li>
+<li><span>03</span><strong data-i18n="Product engineering">Product engineering</strong></li>
+</ol>
+</div>
 </div>
 </section>
 <section aria-labelledby="skill-update-title" class="section skill-update">
@@ -309,11 +325,11 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <div class="section-head compact" data-reveal="">
 <p class="eyebrow" data-i18n="Method">Method</p>
 <h2 data-i18n="The build process is simple on purpose." id="method-title">The build process is simple on purpose.</h2>
-<p data-i18n="Start with the ticket. Understand what broke or what needs to improve. Use AI to accelerate the solve. Test it live. Keep the interface clear.">Start with the ticket. Understand what broke or what needs to improve. Use AI to accelerate the solve. Test it live. Keep the interface clear.</p>
+<p data-i18n="Start with the ticket, sketch the user journey, use Claude to explore solutions, build the smallest useful change, and test it live. Design gives the work direction; engineering makes it real.">Start with the ticket, sketch the user journey, use Claude to explore solutions, build the smallest useful change, and test it live. Design gives the work direction; engineering makes it real.</p>
 </div>
 <div class="method-list" data-reveal="">
 <article><span>01</span><h3 data-i18n="Read the ticket">Read the ticket</h3><p data-i18n="Understand the issue, expected behavior, user impact, and where the change lives.">Understand the issue, expected behavior, user impact, and where the change lives.</p></article>
-<article><span>02</span><h3 data-i18n="Map the solve">Map the solve</h3><p data-i18n="Use Claude and product logic to reason through the path before changing the product.">Use Claude and product logic to reason through the path before changing the product.</p></article>
+<article><span>02</span><h3 data-i18n="Map the solve">Map the solve</h3><p data-i18n="Sketch flows and possibilities, then use Claude and product logic to choose the clearest solution before changing the product.">Sketch flows and possibilities, then use Claude and product logic to choose the clearest solution before changing the product.</p></article>
 <article><span>03</span><h3 data-i18n="Build + test">Build + test</h3><p data-i18n="Implement the solution, test it live, and check whether the user path still makes sense.">Implement the solution, test it live, and check whether the user path still makes sense.</p></article>
 <article><span>04</span><h3 data-i18n="Document the proof">Document the proof</h3><p data-i18n="Keep the reasoning clear enough for GitHub, teammates, and future iterations.">Keep the reasoning clear enough for GitHub, teammates, and future iterations.</p></article>
 </div>
