@@ -27,6 +27,7 @@ jobs:
       - name: Check site source and references
         run: |
           node --check script.js
+          node --check scroll-story.js
           node --check i18n.js
           python3 check-site.py
 
