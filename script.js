@@ -104,7 +104,7 @@
       role:'Product Engineer / Designer',status:'Working build',focus:'Product logic, UI clarity, AI-assisted iteration',
       points:['Translate the user goal into a clear next action.','Use Claude to reason through flow and implementation decisions.','Test behavior in the working app rather than relying on static mockups.'],
       pictures:['assets/2day/2day-actual-home.png','assets/2day/2day-direction-board-real.png'],
-      links:[['Latest working version','assets/2day/latest/index.html']]
+      links:[['Try live 2DAY app','https://adoblake.github.io/2DAY-APP/']]
     },
     society: {
       title:'Society 5ive Site Restructure', label:'Web Strategy · Interior Design',
