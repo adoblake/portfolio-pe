@@ -13,6 +13,7 @@ jobs:
       - name: Verify JavaScript syntax
         run: |
           node --check script.js
+          node --check scroll-story.js
           node --check i18n.js
           node --check assets/society5ive/script.js
       - name: Check local HTML links and assets
