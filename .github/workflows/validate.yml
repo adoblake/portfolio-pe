@@ -17,6 +17,8 @@ jobs:
           node --check i18n.js
           node --check check-studio-copy.js
           node check-studio-copy.js
+          node --check check-2day-links.js
+          node check-2day-links.js
           node --check assets/society5ive/script.js
       - name: Check local HTML links and assets
         run: python3 check-site.py
