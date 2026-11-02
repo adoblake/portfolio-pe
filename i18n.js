@@ -18,6 +18,7 @@
     document.documentElement.lang = current === 'zh' ? 'zh-Hans' : current;
     document.querySelectorAll('[data-i18n]').forEach(el => {el.textContent=translate(el.dataset.i18n);});
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{el.placeholder=translate(el.dataset.i18nPlaceholder);});
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el=>{el.setAttribute('aria-label', translate(el.dataset.i18nAriaLabel));});
     document.querySelectorAll('option[data-original]').forEach(el => {el.textContent=translate(el.dataset.original);});
     document.querySelectorAll('[data-language-select]').forEach(el=>{el.value=current;el.setAttribute('aria-label',translate('Website language'));});
     document.querySelectorAll('a[href^="index.html"],a[href^="about.html"]').forEach(a => {
