@@ -1,0 +1,223 @@
+/* Round 31.12 — contrast guarantees for both color modes.
+   Loaded after the existing visual styles on Home and About.
+   Use semantic foreground colors, rather than restyling every section. */
+
+:root {
+  color-scheme: light;
+  --text-on-surface: var(--ink);
+  --text-subtle-on-surface: var(--muted);
+  --text-on-inverse: var(--paper);
+  --focus-contrast: #a74308;
+  --chapter-contrast: #a74308;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --focus-contrast: #ffad70;
+  --chapter-contrast: #ffad70;
+}
+
+/* The site and every neutral surface inherit the same theme tokens. */
+body,
+.site-header,
+.mobile-nav,
+.modal-panel,
+.project-card,
+.workflow-tab,
+.feature-strip article,
+.method-list article,
+.bento-grid article,
+.about-panel,
+.about-panel p,
+.inquiry-panel {
+  color: var(--text-on-surface);
+}
+
+/* Hero, headings, cards and disclosures always match the foreground of the
+   underlying paper surface, even while their reveal animations are playing. */
+.hero-copy h1,
+.about-copy h1,
+.section-head h2,
+.case-copy h2,
+.about-section h2,
+.project-info h3,
+.method-list h3,
+.feature-strip h3,
+.twoday-proof-notes h3,
+.feature-panel h3,
+.workflow-tab summary strong,
+.workflow-tab summary::after,
+.modal-panel h2,
+.modal-body h3,
+.modal-meta span {
+  color: var(--text-on-surface);
+}
+
+/* Secondary copy stays readable in both modes; no low-opacity text overlays. */
+.hero-copy .lead,
+.about-copy .lead,
+.section-head p:not(.eyebrow),
+.case-copy p,
+.about-section p,
+.project-info p,
+.project-info > span,
+.feature-strip article p,
+.method-list p,
+.twoday-proof-notes li,
+.feature-panel p,
+.workflow-tab-body,
+.modal-panel > p:not(.eyebrow),
+.modal-body ol,
+.modal-meta strong,
+.site-footer,
+.about-panel p {
+  color: var(--text-subtle-on-surface);
+}
+
+/* The contact panel INVERTS the theme.
+   Its text must invert with it — previously fixed pale text vanished
+   when the background changed from dark to light. */
+.contact-card {
+  background: var(--ink);
+  color: var(--text-on-inverse);
+}
+.contact-card h2,
+.contact-card .eyebrow,
+.contact-card p {
+  color: var(--text-on-inverse);
+}
+@supports (color: color-mix(in srgb, white, black)) {
+  .contact-card .eyebrow,
+  .contact-card p {
+    color: color-mix(in srgb, var(--paper) 82%, var(--ink));
+  }
+}
+.contact-card .button-paper,
+.contact-card .button-dark {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+}
+.contact-card .button-outline-paper,
+.contact-card .button-ghost {
+  background: transparent;
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+/* Fixed-color stages need fixed-color labels — don't follow page theme tokens
+   onto artwork with an independent black, navy, or cream background. */
+.device-overlay,
+.device-overlay p { color: #f7f7f2; }
+.device-overlay span { color: #101010; }
+
+.workflow-window,
+.workflow-window-top p,
+.workflow-code-lines li,
+.workflow-code-lines li span {
+  color: #f7f7f2;
+}
+.workflow-window-top p { color: #dedbd5; }
+.workflow-code-lines li:not(.is-current) { opacity: .82; }
+.workflow-code-lines b { color: #ff934d; }
+
+.work-section .visual-twoday .project-number,
+.work-section .visual-neighbor .project-number,
+.work-section .visual-mascot .project-number {
+  color: #f7f7f2;
+}
+.work-section .visual-society .project-number {
+  color: #38362f;
+}
+.work-section .visual-society .society-preview-masthead strong {
+  color: #191815;
+}
+
+/* Dynamic actions, including focus, open dialogs, filters and the language menu.
+   Do not rely on the user agent's default dark-text button styling. */
+.modal-close,
+.modal-actions button,
+#modalExamplesToggle,
+.inquiry-form label,
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  color: var(--text-on-surface);
+}
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  caret-color: var(--text-on-surface);
+  background-color: var(--paper);
+}
+.inquiry-form input::placeholder,
+.inquiry-form textarea::placeholder {
+  color: var(--text-subtle-on-surface);
+  opacity: 1;
+}
+.inquiry-form select option,
+.language-control select option {
+  background: var(--paper);
+  color: var(--text-on-surface);
+}
+.inquiry-form input:-webkit-autofill,
+.inquiry-form textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-on-surface);
+  box-shadow: 0 0 0 1000px var(--paper) inset;
+}
+
+/* Ensure shared button variants retain their intended contrast on hover,
+   without touching the transparent/text-only navigation treatment. */
+.button-dark,
+.button-dark:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.button-ghost,
+.button-ghost:hover {
+  color: var(--ink);
+}
+.filter:not(.active) { color: var(--muted); }
+.filter:is(.active,:hover,:focus-visible) {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.text-button,
+.text-button:hover,
+.site-footer a,
+.site-footer a:hover {
+  color: var(--ink);
+}
+
+/* Keep current text-only navigation readable with any selected language. */
+.site-header .brand,
+.site-header .brand-copy strong,
+.site-header .site-nav a,
+.site-header .site-nav button,
+.site-header .language-control select,
+.site-header .menu-button,
+.mobile-nav a,
+.mobile-nav button,
+.mobile-nav .language-control select {
+  color: var(--text-on-surface);
+}
+.site-header .brand-copy small { color: var(--text-subtle-on-surface); }
+
+/* Accessible focus treatment on either background. */
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--focus-contrast);
+  outline-offset: 4px;
+}
+.workflow-tab summary:focus-visible,
+.language-control select:focus-visible,
+.site-header :is(a, button, select):focus-visible,
+.mobile-nav :is(a, button, select):focus-visible {
+  outline-color: var(--focus-contrast);
+}
+
+/* Tiny chapter numerals are text, so they use a contrast-safe accent instead
+   of the brighter ornamental orange used for the progress line. */
+.scroll-story-enabled .story-chapter .eyebrow[data-story-index]::before {
+  color: var(--chapter-contrast);
+}
