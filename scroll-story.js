@@ -37,6 +37,7 @@
     const eyebrow = section.querySelector(
       ':scope > .section-head .eyebrow, :scope > .hero-copy .eyebrow, ' +
       ':scope > .case-copy .eyebrow, :scope > .contact-card .eyebrow, ' +
+      ':scope > .creative-grid .creative-copy .eyebrow, ' +
       ':scope > .simple-case-copy .eyebrow'
     );
     if (eyebrow) eyebrow.dataset.storyIndex = String(i + 1).padStart(2, '0');
@@ -47,6 +48,7 @@
   mark('.apple-hero .hero-product', 120);
   mark('.quick-read .section-head > *, .skill-update .section-head > *, .work-section .section-head > *', 90);
   mark('.quick-lanes > article', 85);
+  mark('.creative-foundation .creative-copy > *, .creative-foundation .creative-support > p, .creative-foundation .creative-path > li', 70);
   mark('.engineering-workflow .workflow-visual, .engineering-workflow .workflow-tab', 65);
   mark('.work-section .filter-row', 0);
   mark('.work-section .project-card', 90);
