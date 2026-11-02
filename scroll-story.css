@@ -1,0 +1,122 @@
+/* Round 31.11 — scroll storytelling layer.
+   Visual rhythm only; no changes to the underlying layout, content or interactions. */
+
+/* A quiet progress rule that travels with the reader. */
+.story-progress {
+  position: fixed;
+  z-index: 49;
+  inset: 0 auto auto 0;
+  width: 0;
+  height: 3px;
+  background: #ef7c26;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(239, 124, 38, .25);
+}
+.story-progress[hidden] { display: none; }
+
+/* Chapter numbers join the existing eyebrow system; no extra copy or font. */
+.scroll-story-enabled .story-chapter .eyebrow[data-story-index]::before {
+  content: attr(data-story-index) " / ";
+  color: #ef7c26;
+  font-family: var(--font-sans);
+  font-weight: 850;
+  letter-spacing: .09em;
+  white-space: nowrap;
+}
+.scroll-story-enabled .story-chapter .eyebrow[data-story-index] {
+  transition: color .3s ease;
+}
+.scroll-story-enabled .story-chapter.story-chapter-active .eyebrow[data-story-index] {
+  color: var(--ink);
+}
+
+/* Individual text and media arrive in an ordered, understated sequence. */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-story-enabled [data-story-item] {
+    opacity: 0;
+    transform: translate3d(0, var(--story-rise, 28px), 0);
+    transition:
+      opacity 750ms cubic-bezier(.16, 1, .3, 1),
+      transform 900ms cubic-bezier(.16, 1, .3, 1);
+    transition-delay: var(--story-delay, 0ms);
+  }
+  .scroll-story-enabled [data-story-item].story-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  /* Avoid compounded motion on elements already controlled by Round 31.7. */
+  .scroll-story-enabled [data-reveal][data-story-item].is-visible:not(.story-visible) {
+    opacity: 0;
+    transform: translate3d(0, var(--story-rise, 28px), 0);
+  }
+  .scroll-story-enabled [data-reveal][data-story-item].story-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .scroll-story-enabled .apple-hero .hero-copy h1[data-story-item],
+  .scroll-story-enabled .section-head h2[data-story-item],
+  .scroll-story-enabled .case-copy h2[data-story-item] {
+    --story-rise: 38px;
+  }
+  .scroll-story-enabled .project-card[data-story-item],
+  .scroll-story-enabled .quick-lanes article[data-story-item],
+  .scroll-story-enabled .method-list article[data-story-item] {
+    --story-rise: 20px;
+  }
+
+  /* The featured app acquires gentle depth, synchronized with scrolling. */
+  .scroll-story-enabled .twoday-real-case .twoday-proof {
+    overflow: hidden;
+  }
+  .scroll-story-enabled .twoday-real-case .twoday-proof > img {
+    transform: translate3d(0, var(--story-image-shift, 0px), 0);
+    transition: transform 120ms linear;
+  }
+
+  /* Existing workflow spotlight gains a visual handoff from step to step. */
+  .scroll-story-enabled .workflow-code-lines li.is-current {
+    box-shadow: inset 3px 0 0 #ef7c26, 0 10px 24px rgba(0,0,0,.09);
+  }
+  .scroll-story-enabled .workflow-tab.is-current {
+    box-shadow: inset 3px 0 0 rgba(239,124,38,.7);
+  }
+
+  /* No forced page snapping, horizontal scrolling or sticky mobile panels. */
+  @media (hover: hover) and (pointer: fine) {
+    .scroll-story-enabled .project-card.story-visible .project-visual {
+      transition: filter .55s ease;
+    }
+    .scroll-story-enabled .project-card.story-visible:hover .project-visual {
+      filter: brightness(1.035);
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .story-progress { height: 2px; }
+  .scroll-story-enabled .story-chapter .eyebrow[data-story-index]::before {
+    letter-spacing: .05em;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-story-enabled [data-story-item] {
+      --story-rise: 14px;
+      transition-duration: 550ms, 700ms;
+      transition-delay: min(var(--story-delay, 0ms), 120ms);
+    }
+    .scroll-story-enabled .twoday-real-case .twoday-proof > img {
+      transform: none;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-story-enabled [data-story-item],
+  .scroll-story-enabled [data-reveal][data-story-item] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .story-progress {
+    transition: none;
+  }
+}
