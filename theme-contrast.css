@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: light;
+  /* The original light-mode muted gray fell just below 4.5:1 on paper. */
+  --muted: #6f6c64;
   --text-on-surface: var(--ink);
   --text-subtle-on-surface: var(--muted);
   --text-on-inverse: var(--paper);
