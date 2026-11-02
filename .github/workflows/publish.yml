@@ -31,6 +31,8 @@ jobs:
           node --check i18n.js
           node --check check-studio-copy.js
           node check-studio-copy.js
+          node --check check-2day-links.js
+          node check-2day-links.js
           python3 check-site.py
           python3 check-theme-contrast.py
 
