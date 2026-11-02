@@ -30,6 +30,7 @@ jobs:
           node --check scroll-story.js
           node --check i18n.js
           python3 check-site.py
+          python3 check-theme-contrast.py
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

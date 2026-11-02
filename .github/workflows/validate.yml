@@ -18,3 +18,4 @@ jobs:
           node --check assets/society5ive/script.js
       - name: Check local HTML links and assets
         run: python3 check-site.py
+          python3 check-theme-contrast.py

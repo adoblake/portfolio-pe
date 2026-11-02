@@ -2,7 +2,9 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><script>/* Match the saved theme before the first paint. */
+try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved; } catch (_) {}
+</script>
 <title>Adonnis Blake — Product Engineer / AI Build Practice</title>
 <meta content="A simplified portfolio for Adonnis Blake: product engineering, Claude-assisted GitHub ticket work, live testing, UI/UX systems, and visual problem-solving." name="description"/>
 <meta content="Adonnis Blake — Portfolio" property="og:title"/>
@@ -12,6 +14,7 @@
 <link href="assets/brand/adonnis-brand-icon.png" rel="apple-touch-icon"/>
 <link as="image" href="assets/profile/adonnis-portrait.jpg" rel="preload"/>
 <link href="styles.css" rel="stylesheet"/><link href="interaction.css" rel="stylesheet"/><link href="navigation.css" rel="stylesheet"/><link href="work-showcase.css" rel="stylesheet"/><link href="scroll-story.css" rel="stylesheet"/>
+<link href="theme-contrast.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" data-i18n="Skip to work" href="#work">Skip to work</a>

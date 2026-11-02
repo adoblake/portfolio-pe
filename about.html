@@ -2,12 +2,15 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><script>/* Match the saved theme before the first paint. */
+try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved; } catch (_) {}
+</script>
 <title>About — Adonnis Blake</title>
 <meta content="About Adonnis Blake — Product Engineer, UI/UX designer, concept artist, TurboVets product work, Claude-assisted GitHub ticket solving, and live testing." name="description"/>
 <link href="assets/brand/adonnis-brand-icon.png" rel="icon" type="image/png"/>
 <link href="assets/brand/adonnis-brand-icon.png" rel="apple-touch-icon"/>
 <link href="styles.css" rel="stylesheet"/><link href="interaction.css" rel="stylesheet"/><link href="navigation.css" rel="stylesheet"/>
+<link href="theme-contrast.css" rel="stylesheet"/>
 </head>
 <body class="about-page">
 <a class="skip" data-i18n="Skip to story" href="#story">Skip to story</a>
