@@ -768,7 +768,7 @@ h3,
 .modal-panel h2,
 .modal-body h3,
 .society-mini strong,
-.twoday-proof-notes h3,
+.app-proof-notes h3,
 .feature-panel h3,
 .bento-grid h3,
 .workflow-tab summary strong,
@@ -807,7 +807,7 @@ li,
 .workflow-code-lines span,
 .bento-grid span,
 .workflow-tab summary span,
-.twoday-proof-notes .eyebrow,
+.app-proof-notes .eyebrow,
 .feature-strip article > span,
 .filter,
 .text-button,
@@ -1151,8 +1151,7 @@ html[data-theme="dark"] .workflow-accordion {
 .project-info { border-bottom: 1px solid var(--line); }
 .project-info h3 { font-size: var(--type-card-title); }
 .project-visual img,
-.twoday-proof img,
-.bucketlist-strip img,
+.app-proof img,
 .feature-panel img {
   display: block;
   width: 100%;
@@ -1185,14 +1184,14 @@ html[data-theme="dark"] .workflow-accordion {
 
 .split-case,
 .simple-case .feature-panel,
-.twoday-real-case,
+.app-case,
 .product-section {
   display: grid;
   grid-template-columns: .82fr 1.18fr;
   gap: 34px;
   align-items: center;
 }
-.twoday-actual-showcase,
+.app-showcase,
 .feature-panel {
   display: grid;
   grid-template-columns: minmax(260px, .85fr) minmax(260px, 1fr);
@@ -1203,11 +1202,10 @@ html[data-theme="dark"] .workflow-accordion {
   padding: clamp(18px, 2.5vw, 28px);
   background: rgba(255,255,255,.16);
 }
-html[data-theme="dark"] .twoday-actual-showcase,
+html[data-theme="dark"] .app-showcase,
 html[data-theme="dark"] .feature-panel { background: rgba(255,255,255,.035); }
-.twoday-proof,
-.feature-panel button,
-.bucketlist-strip button {
+.app-proof,
+.feature-panel button {
   cursor: pointer;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -1215,22 +1213,21 @@ html[data-theme="dark"] .feature-panel { background: rgba(255,255,255,.035); }
   background: var(--soft);
   padding: 0;
 }
-.twoday-proof { aspect-ratio: 9/16; background: #050505; }
-.twoday-proof img { object-fit: cover; object-position: top center; }
-.twoday-proof-notes h3,
+.app-proof { aspect-ratio: 9/16; background: #050505; }
+.app-proof img { object-fit: cover; object-position: top center; }
+.app-proof-notes h3,
 .feature-panel h3,
 .bento-grid h3 {
   margin: 0 0 16px;
   font-size: clamp(30px, 3.8vw, 56px);
 }
-.twoday-proof-notes ul,
+.app-proof-notes ul,
 .bento-grid p,
 .feature-panel p {
   color: var(--muted);
   line-height: 1.6;
 }
-.bento-grid,
-.bucketlist-strip {
+.bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
@@ -1240,10 +1237,6 @@ html[data-theme="dark"] .feature-panel { background: rgba(255,255,255,.035); }
   padding: 24px;
   min-height: 250px;
 }
-.bucketlist-strip {
-  grid-template-columns: repeat(4, 1fr);
-}
-.bucketlist-strip button { aspect-ratio: 1 / 1; }
 .centered { justify-content: center; }
 
 /* Forms + modals typography */
@@ -1306,7 +1299,7 @@ html[data-theme="dark"] .feature-panel { background: rgba(255,255,255,.035); }
   .section-head,
   .engineering-workflow,
   .split-case,
-  .twoday-real-case,
+  .app-case,
   .product-section,
   .about-section {
     grid-template-columns: 1fr;
@@ -1315,8 +1308,7 @@ html[data-theme="dark"] .feature-panel { background: rgba(255,255,255,.035); }
   .case-copy h2,
   .about-section h2 { max-width: 12ch; }
   .feature-strip,
-  .bento-grid,
-  .bucketlist-strip { grid-template-columns: repeat(2, 1fr); }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 780px) {
@@ -1335,8 +1327,7 @@ html[data-theme="dark"] .feature-panel { background: rgba(255,255,255,.035); }
   .device-overlay { left: 14px; right: 14px; bottom: 14px; align-items: flex-start; flex-direction: column; }
   .feature-strip,
   .bento-grid,
-  .bucketlist-strip,
-  .twoday-actual-showcase,
+  .app-showcase,
   .feature-panel,
   .inquiry-form { grid-template-columns: 1fr; }
   .workflow-code-lines { min-height: 320px; padding: 20px; }
@@ -1391,7 +1382,7 @@ h2,
 .method-list h3,
 .capability-card h3,
 .feature-strip h3,
-.twoday-proof-notes h3,
+.app-proof-notes h3,
 .feature-panel h3,
 .bento-grid h3 {
   font-family: var(--font-serif);
@@ -1421,7 +1412,7 @@ h2,
 .method-list h3,
 .capability-card h3,
 .bento-grid h3,
-.twoday-proof-notes h3,
+.app-proof-notes h3,
 .feature-panel h3 {
   font-size: var(--type-card);
 }
@@ -1466,7 +1457,7 @@ li,
 .method-list span,
 .modal-meta strong,
 .bento-grid span,
-.twoday-proof-notes .eyebrow {
+.app-proof-notes .eyebrow {
   font-family: var(--font-sans);
   font-size: var(--type-ui);
   font-weight: 850;
@@ -1867,13 +1858,13 @@ textarea {
 .visual-neighbor img { object-fit: contain; padding: clamp(32px, 4vw, 70px); }
 .visual-mascot img { object-fit: contain; padding: clamp(22px, 3vw, 48px); }
 
-.twoday-real-case,
+.app-case,
 .product-section,
 .split-case {
   width: min(calc(100% - 64px), var(--max));
 }
 
-.twoday-actual-showcase,
+.app-showcase,
 .bento-grid,
 .capability-grid,
 .proof-strip {
@@ -1899,7 +1890,7 @@ textarea {
   .hero.apple-hero,
   .hero.about-hero,
   .section,
-  .twoday-real-case,
+  .app-case,
   .product-section,
   .split-case {
     width: min(calc(100% - 32px), var(--max));
@@ -2044,8 +2035,7 @@ textarea {
 
 .visual-mascot img,
 .visual-society img,
-.feature-panel img,
-.bucketlist-strip img {
+.feature-panel img {
   object-fit: contain;
 }
 
@@ -2091,14 +2081,14 @@ textarea {
   min-height: 100%;
 }
 
-/* Featured 2DAY case should keep using all three columns without awkward dead space. */
-.twoday-real-case {
+/* Shared app case: story column plus framed screenshot and product notes. */
+.app-case {
   gap: clamp(20px, 2.4vw, 42px);
   align-items: stretch;
 }
 
-.twoday-proof,
-.twoday-proof-notes {
+.app-proof,
+.app-proof-notes {
   min-height: 100%;
 }
 
@@ -2106,7 +2096,7 @@ textarea {
   .hero.apple-hero,
   .hero.about-hero,
   .engineering-workflow,
-  .twoday-real-case,
+  .app-case,
   .split-case,
   .product-section,
   .about-section {
@@ -2138,8 +2128,7 @@ textarea {
 
   .work-grid,
   .feature-strip,
-  .bento-grid,
-  .bucketlist-strip {
+  .bento-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2422,8 +2411,3 @@ textarea {
     min-height: 330px;
   }
 }
-
-/* Bucketlist case study: complete portrait screens with feature labels. */
-.bucketlist-strip button { aspect-ratio: auto; display: flex; flex-direction: column; }
-.bucketlist-strip img { width: 100%; height: auto; min-height: 0; aspect-ratio: 390 / 844; object-fit: contain; background: #101010; }
-.bucketlist-strip button > span { display: block; padding: 16px; color: var(--ink); font: 700 14px/1.4 var(--font-sans); }

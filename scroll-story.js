@@ -52,7 +52,7 @@
   mark('.engineering-workflow .workflow-visual, .engineering-workflow .workflow-tab', 65);
   mark('.work-section .filter-row', 0);
   mark('.work-section .project-card', 90);
-  mark('.twoday-real-case .case-copy > *, .twoday-real-case .twoday-actual-showcase', 80);
+  mark('.app-case .case-copy > *, .app-case .app-showcase', 80);
   mark('.simple-case > [data-reveal], .simple-case > .case-copy, .simple-case > .case-visual', 75);
   mark('.method-section .section-head > *, .method-list > article', 85);
   mark('.contact-section .contact-card', 0);
@@ -69,8 +69,9 @@
     if (!item.classList.contains('story-visible')) observer.observe(item);
   }
 
-  const feature = document.querySelector('.twoday-real-case');
-  const featureImg = feature?.querySelector('.twoday-proof > img');
+  const features = [...document.querySelectorAll('.app-case')].map(section => ({
+    section, image: section.querySelector('.app-proof > img')
+  }));
   let frame = 0;
 
   function draw() {
@@ -97,17 +98,19 @@
       section.classList.toggle('story-chapter-active', section === active);
     }
 
-    // Gentle depth only within the existing featured-image frame on desktop.
-    if (feature && featureImg && innerWidth > 780 && !reduceMotion.matches) {
-      const rect = feature.getBoundingClientRect();
-      if (rect.bottom > 0 && rect.top < innerHeight) {
-        const t = Math.max(0, Math.min(1,
-          (innerHeight - rect.top) / (innerHeight + rect.height)));
-        featureImg.style.setProperty('--story-image-shift',
-          `${((t - .5) * 26).toFixed(1)}px`);
+    // Apply the same restrained motion to every app case, respecting reduced motion.
+    for (const {section, image} of features) {
+      if (!image) continue;
+      if (innerWidth > 780 && !reduceMotion.matches) {
+        const rect = section.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < innerHeight) {
+          const t = Math.max(0, Math.min(1,
+            (innerHeight - rect.top) / (innerHeight + rect.height)));
+          image.style.setProperty('--story-image-shift', `${((t - .5) * 26).toFixed(1)}px`);
+        }
+      } else {
+        image.style.removeProperty('--story-image-shift');
       }
-    } else if (featureImg) {
-      featureImg.style.removeProperty('--story-image-shift');
     }
   }
 
@@ -121,7 +124,7 @@
       root.classList.remove('scroll-story-enabled');
       progress.hidden = true;
       for (const item of items) item.classList.add('story-visible');
-      if (featureImg) featureImg.style.removeProperty('--story-image-shift');
+      for (const {image} of features) image?.style.removeProperty('--story-image-shift');
     } else {
       root.classList.add('scroll-story-enabled');
       progress.hidden = false;

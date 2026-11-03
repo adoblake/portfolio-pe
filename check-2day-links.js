@@ -12,7 +12,7 @@ const expected = [
   /<a class="project-visual has-image visual-twoday"[^>]*href="https:\/\/adoblake\.github\.io\/2DAY-APP\/"/,
   /<a class="text-button" data-i18n="Try live 2DAY app" href="https:\/\/adoblake\.github\.io\/2DAY-APP\/"/,
   /<a class="button button-dark" data-i18n="Try live 2DAY app" href="https:\/\/adoblake\.github\.io\/2DAY-APP\/"/,
-  /<a class="twoday-proof" href="https:\/\/adoblake\.github\.io\/2DAY-APP\/"/,
+  /<a class="app-proof" href="https:\/\/adoblake\.github\.io\/2DAY-APP\/"/,
 ];
 for (const link of expected) assert.match(home, link, 'Missing 2DAY live launch link');
 assert.equal(home.split(url).length - 1, 4, 'Expected four Home launch destinations');
