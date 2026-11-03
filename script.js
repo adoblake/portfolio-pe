@@ -121,13 +121,6 @@
       pictures:['assets/bucketlist/game-plan-light.png','assets/bucketlist/game-plan-dark.png'],
       links:[['Try BUCKETLIST','https://adoblake.github.io/bucketlist/'],['View source','https://github.com/adoblake/bucketlist']]
     },
-    naples: {
-      title:'Only In Naples',label:'Brand System · Character Merch',
-      intro:'A repeatable manatee character and merchandise system with a recognizable style across multiple scenarios.',
-      role:'Brand / Character Designer',status:'Identity exploration',focus:'Visual identity, illustration, merch applications',
-      points:['Create one recognizable mascot across varied outfits and settings.','Test the character across product and promotional applications.','Keep the designs recognizable as a connected family.'],
-      pictures:['assets/naples/naples-manatee-captain.png','assets/naples/naples-manatee-golf.png','assets/naples/naples-manatee-patriotic.png'],links:[]
-    },
     neighbors: {
       title:'Neighbors Bar',label:'Brand Identity · Environmental Graphics',
       intro:'A neighborhood bar identity carried from expressive typography into signage, murals, and real-world use.',

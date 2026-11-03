@@ -234,35 +234,6 @@
   color: #f7f7f2;
 }
 
-/* Only In Naples artwork remains available in its case study. */
-.work-section .visual-mascot {
-  background: #12222e;
-}
-.work-section .visual-mascot .naples-preview-gallery {
-  display: grid;
-  grid-template-columns: 1.14fr .9fr .9fr;
-  align-items: stretch;
-  gap: 12px;
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-}
-.work-section .visual-mascot .naples-preview-gallery img {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 0 !important;
-  max-height: 100%;
-  padding: 0 !important;
-  object-fit: cover;
-  object-position: center 12%;
-  border-radius: 9px;
-  background: #f7f5ef;
-}
-.work-section .visual-mascot .naples-preview-gallery img:first-child {
-  object-position: center 9%;
-}
-
 /* Neighbors: full-size wordmark alongside two real-world signage photos. */
 .work-section .visual-neighbor {
   display: block;
@@ -329,7 +300,6 @@
     padding: 16px;
   }
   .work-section .visual-neighbor .neighbor-preview-strip { gap: 6px; }
-  .work-section .visual-mascot .naples-preview-gallery { gap: 6px; padding: 10px; }
   .work-section .visual-society { padding: 10px !important; }
   .work-section .visual-society .society-mini { padding: 12px; }
   .society-preview-masthead i { display: none; }
