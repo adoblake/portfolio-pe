@@ -114,7 +114,7 @@
       pictures:[],links:[['Current site','https://society5ive.com/'],['Revamp','assets/society5ive/index.html']]
     },
     bucketlist: {
-      title:'BUCKETLIST',label:'Product Engineering · Basketball Community',
+      title:'Bucketlist',label:'Product Engineering · Basketball Community',
       intro:'A mobile-first basketball prototype connecting Arizona court discovery, scheduled games, team setup, and personal progress. Shared groups and chat run through a separate authenticated community service.',
       role:'Product Engineer / Designer',status:'Live prototype',focus:'Court discovery, game coordination, mobile UX',
       points:['Find courts and explore scheduled games across Arizona.','Join a local-demo roster, choose a team, and track self-reported sessions.','Coordinate in shared groups and chat; game reservations and stats remain browser-local.'],
