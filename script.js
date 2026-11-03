@@ -100,10 +100,10 @@
   const projects = {
     twoday: {
       title: '2DAY Apps Journey', label: 'Product Engineering · AI-assisted app build',
-      intro:'A goal-first app built around practical daily action and measurable progress. The project connects interface decisions to product logic and live testing.',
-      role:'Product Engineer / Designer',status:'Working build',focus:'Product logic, UI clarity, AI-assisted iteration',
-      points:['Translate the user goal into a clear next action.','Use Claude to reason through flow and implementation decisions.','Test behavior in the working app rather than relying on static mockups.'],
-      pictures:['assets/2day/2day-actual-home.png','assets/2day/2day-direction-board-real.png'],
+      intro:'A meal-planning and daily follow-through app with revisable goals, browser-local progress, Google and Outlook calendar handoff, and on-device Share / QR. Optional provider-backed messaging needs a separately hosted server.',
+      role:'Product Engineer / Designer',status:'Working build',focus:'Meal planning, daily follow-through, calendar handoff',
+      points:['Turn the selected wellness goal into a clear daily meal routine.','Preserve journey progress when revising the plan; review program guidance before accepting it.','Open calendar events for review and saving in Google or Outlook; share the public app using an on-device QR code.'],
+      pictures:['assets/2day/2day-home-v12-1.png','assets/2day/2day-current-day.png','assets/2day/2day-current-calendar.png','assets/2day/2day-current-guidance.png'],
       links:[['Try live 2DAY app','https://adoblake.github.io/2DAY-APP/']]
     },
     society: {
