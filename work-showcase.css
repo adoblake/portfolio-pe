@@ -86,11 +86,11 @@
 }
 
 /* 2DAY: authentic app screen, cropped to the relevant product experience. */
-.work-section .visual-twoday {
+.work-section :is(.visual-twoday, .visual-bucketlist) {
   background: radial-gradient(ellipse at 70% 32%, #242220, #0a0a0a 70%);
 }
 
-.work-section .visual-twoday::before {
+.work-section :is(.visual-twoday, .visual-bucketlist)::before {
   content: "2DAY";
   position: absolute;
   left: 6%;
@@ -106,7 +106,7 @@
   pointer-events: none;
 }
 
-.work-section .visual-twoday::after {
+.work-section :is(.visual-twoday, .visual-bucketlist)::after {
   content: "";
   position: absolute;
   left: 7%;
@@ -118,7 +118,7 @@
   pointer-events: none;
 }
 
-.work-section .visual-twoday > img {
+.work-section :is(.visual-twoday, .visual-bucketlist) > img {
   position: absolute;
   right: 9%;
   top: 13px;
@@ -224,59 +224,14 @@
   background: linear-gradient(115deg, #c8c4b8 0 36%, #eeebe5 36% 63%, #93948b 63%);
 }
 
-/* BUCKETLIST: the actual game-plan screen in both app themes. */
-.work-section .visual-bucketlist {
-  background: #12222e;
+/* Bucketlist shares 2DAY's wordmark, orange rule, and single-screen composition. */
+.work-section .visual-bucketlist::before {
+  content: "Bucketlist";
+  font-size: clamp(52px, 6.6vw, 106px);
+  letter-spacing: -.07em;
 }
 .work-section .visual-bucketlist .project-number {
   color: #f7f7f2;
-}
-.work-section .bucketlist-preview-gallery {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: clamp(12px, 3vw, 30px);
-  height: 100%;
-  padding: 22px 38px 0;
-  overflow: hidden;
-}
-.work-section .bucketlist-preview-gallery img {
-  display: block;
-  width: min(43%, 200px);
-  height: auto !important;
-  max-height: none;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px #0005;
-}
-
-/* Only In Naples artwork remains available in its case study. */
-.work-section .visual-mascot {
-  background: #12222e;
-}
-.work-section .visual-mascot .naples-preview-gallery {
-  display: grid;
-  grid-template-columns: 1.14fr .9fr .9fr;
-  align-items: stretch;
-  gap: 12px;
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-}
-.work-section .visual-mascot .naples-preview-gallery img {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 0 !important;
-  max-height: 100%;
-  padding: 0 !important;
-  object-fit: cover;
-  object-position: center 12%;
-  border-radius: 9px;
-  background: #f7f5ef;
-}
-.work-section .visual-mascot .naples-preview-gallery img:first-child {
-  object-position: center 9%;
 }
 
 /* Neighbors: full-size wordmark alongside two real-world signage photos. */
@@ -335,7 +290,7 @@
     flex-basis: clamp(220px, 55vw, 315px);
     height: clamp(220px, 55vw, 315px);
   }
-  .work-section .visual-twoday > img { right: 11%; }
+  .work-section :is(.visual-twoday, .visual-bucketlist) > img { right: 11%; }
 }
 @media (max-width: 420px) {
   .work-section .project-info { padding: 22px; }
@@ -345,7 +300,6 @@
     padding: 16px;
   }
   .work-section .visual-neighbor .neighbor-preview-strip { gap: 6px; }
-  .work-section .visual-mascot .naples-preview-gallery { gap: 6px; padding: 10px; }
   .work-section .visual-society { padding: 10px !important; }
   .work-section .visual-society .society-mini { padding: 12px; }
   .society-preview-masthead i { display: none; }

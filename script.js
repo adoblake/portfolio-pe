@@ -114,19 +114,12 @@
       pictures:[],links:[['Current site','https://society5ive.com/'],['Revamp','assets/society5ive/index.html']]
     },
     bucketlist: {
-      title:'BUCKETLIST',label:'Product Engineering · Basketball Community',
+      title:'Bucketlist',label:'Product Engineering · Basketball Community',
       intro:'A mobile-first basketball prototype connecting Arizona court discovery, scheduled games, team setup, and personal progress. Shared groups and chat run through a separate authenticated community service.',
       role:'Product Engineer / Designer',status:'Live prototype',focus:'Court discovery, game coordination, mobile UX',
       points:['Find courts and explore scheduled games across Arizona.','Join a local-demo roster, choose a team, and track self-reported sessions.','Coordinate in shared groups and chat; game reservations and stats remain browser-local.'],
       pictures:['assets/bucketlist/game-plan-light.png','assets/bucketlist/game-plan-dark.png'],
       links:[['Try BUCKETLIST','https://adoblake.github.io/bucketlist/'],['View source','https://github.com/adoblake/bucketlist']]
-    },
-    naples: {
-      title:'Only In Naples',label:'Brand System · Character Merch',
-      intro:'A repeatable manatee character and merchandise system with a recognizable style across multiple scenarios.',
-      role:'Brand / Character Designer',status:'Identity exploration',focus:'Visual identity, illustration, merch applications',
-      points:['Create one recognizable mascot across varied outfits and settings.','Test the character across product and promotional applications.','Keep the designs recognizable as a connected family.'],
-      pictures:['assets/naples/naples-manatee-captain.png','assets/naples/naples-manatee-golf.png','assets/naples/naples-manatee-patriotic.png'],links:[]
     },
     neighbors: {
       title:'Neighbors Bar',label:'Brand Identity · Environmental Graphics',
