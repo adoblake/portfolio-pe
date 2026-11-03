@@ -66,10 +66,10 @@
   }
 
   /* The featured app acquires gentle depth, synchronized with scrolling. */
-  .scroll-story-enabled .twoday-real-case .twoday-proof {
+  .scroll-story-enabled .app-case .app-proof {
     overflow: hidden;
   }
-  .scroll-story-enabled .twoday-real-case .twoday-proof > img {
+  .scroll-story-enabled .app-case .app-proof > img {
     transform: translate3d(0, var(--story-image-shift, 0px), 0);
     transition: transform 120ms linear;
   }
@@ -104,7 +104,7 @@
       transition-duration: 550ms, 700ms;
       transition-delay: min(var(--story-delay, 0ms), 120ms);
     }
-    .scroll-story-enabled .twoday-real-case .twoday-proof > img {
+    .scroll-story-enabled .app-case .app-proof > img {
       transform: none;
     }
   }

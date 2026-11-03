@@ -118,7 +118,7 @@
       intro:'A mobile-first basketball prototype connecting Arizona court discovery, scheduled games, team setup, and personal progress. Shared groups and chat run through a separate authenticated community service.',
       role:'Product Engineer / Designer',status:'Live prototype',focus:'Court discovery, game coordination, mobile UX',
       points:['Find courts and explore scheduled games across Arizona.','Join a local-demo roster, choose a team, and track self-reported sessions.','Coordinate in shared groups and chat; game reservations and stats remain browser-local.'],
-      pictures:['assets/bucketlist/game-plan-light.png','assets/bucketlist/game-plan-dark.png'],
+      pictures:['assets/bucketlist/game-plan-light.png','assets/bucketlist/game-plan-dark.png','assets/bucketlist/phoenix-courts.png','assets/bucketlist/mobile-teams.png','assets/bucketlist/showcase-stats.png'],
       links:[['Try BUCKETLIST','https://adoblake.github.io/bucketlist/'],['View source','https://github.com/adoblake/bucketlist']]
     },
     neighbors: {

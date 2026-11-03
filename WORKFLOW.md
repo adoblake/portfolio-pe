@@ -17,3 +17,11 @@ Four large Only In Naples illustration SVGs were exported as visually equivalent
 
 ## Review requirements
 Translation packs cover English, Spanish, French, Simplified Chinese, and Japanese. Native-speaker copy review and actual desktop/mobile visual QA are still recommended before public publication.
+
+## Design standard for every addition
+
+Use the established portfolio components before introducing a new layout. 2DAY is the reference for product case studies: a `.app-case` section with `.case-copy` (eyebrow, serif heading, concise paragraph, and `.case-actions`) followed by `.app-showcase` (one linked `.app-proof` screenshot and `.app-proof-notes` with an eyebrow, serif subheading, and concise feature list). Bucketlist uses this same component. Supporting screenshots belong in the existing project dialog behind “More,” rather than a separate full-width gallery.
+
+Keep the shared serif/sans typography, theme tokens, border radii, spacing, button hierarchy, title casing, responsive breakpoints, scroll reveals, and reduced-motion behavior. Reuse the existing Selected Work card pattern for new projects. Do not create project-specific layout overrides when the shared component covers the need.
+
+Before handoff, compare the new section with 2DAY at desktop, tablet, and phone widths in both themes. Check all five languages, live links, project dialog, keyboard access, image loading, and horizontal overflow. Document any intentional departure from the established layout; do not silently introduce one.
