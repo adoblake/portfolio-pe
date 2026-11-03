@@ -13,7 +13,7 @@
 The Instagram motion reference informs restrained motion, not a replacement of the Round 31 design. The portfolio is a distinct project from `adoblake/making-bucketlist`.
 
 ## Asset note
-Four large Only In Naples illustration SVGs were exported as visually equivalent 720 × 1152 embedded-WebP SVG previews for reliable GitHub upload. Their file paths remain unchanged. The original full-vector designs remain in the archived Round 31.7 ZIP if needed for future print-quality work.
+Four large Only In Naples illustration SVGs were exported as visually equivalent 720 × 1152 embedded-WebP SVG previews for reliable GitHub upload. Their file paths remain unchanged. The original full-vector designs from the uploaded portfolio archive are preserved in `assets/naples/originals/` for editing and print-quality work. Keep the lightweight previews at their existing paths for site performance; see [the originals guide](assets/naples/originals/README.md).
 
 ## Review requirements
 Translation packs cover English, Spanish, French, Simplified Chinese, and Japanese. Native-speaker copy review and actual desktop/mobile visual QA are still recommended before public publication.
