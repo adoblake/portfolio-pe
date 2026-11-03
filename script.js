@@ -113,6 +113,14 @@
       points:['Study the current website before redesigning the experience.','Clarify the path from services to relevant work and inquiries.','Create a flexible multi-page revamp for review and iteration.'],
       pictures:[],links:[['Current site','https://society5ive.com/'],['Revamp','assets/society5ive/index.html']]
     },
+    bucketlist: {
+      title:'BUCKETLIST',label:'Product Engineering · Basketball Community',
+      intro:'A mobile-first basketball prototype connecting Arizona court discovery, scheduled games, team setup, and personal progress. Shared groups and chat run through a separate authenticated community service.',
+      role:'Product Engineer / Designer',status:'Live prototype',focus:'Court discovery, game coordination, mobile UX',
+      points:['Find courts and explore scheduled games across Arizona.','Join a local-demo roster, choose a team, and track self-reported sessions.','Coordinate in shared groups and chat; game reservations and stats remain browser-local.'],
+      pictures:['assets/bucketlist/game-plan-light.png','assets/bucketlist/game-plan-dark.png'],
+      links:[['Try BUCKETLIST','https://adoblake.github.io/bucketlist/'],['View source','https://github.com/adoblake/bucketlist']]
+    },
     naples: {
       title:'Only In Naples',label:'Brand System · Character Merch',
       intro:'A repeatable manatee character and merchandise system with a recognizable style across multiple scenarios.',

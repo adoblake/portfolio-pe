@@ -224,7 +224,33 @@
   background: linear-gradient(115deg, #c8c4b8 0 36%, #eeebe5 36% 63%, #93948b 63%);
 }
 
-/* Only In Naples: three real character variants arranged as a brand collection. */
+/* BUCKETLIST: the actual game-plan screen in both app themes. */
+.work-section .visual-bucketlist {
+  background: #12222e;
+}
+.work-section .visual-bucketlist .project-number {
+  color: #f7f7f2;
+}
+.work-section .bucketlist-preview-gallery {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 30px);
+  height: 100%;
+  padding: 22px 38px 0;
+  overflow: hidden;
+}
+.work-section .bucketlist-preview-gallery img {
+  display: block;
+  width: min(43%, 200px);
+  height: auto !important;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #0005;
+}
+
+/* Only In Naples artwork remains available in its case study. */
 .work-section .visual-mascot {
   background: #12222e;
 }
