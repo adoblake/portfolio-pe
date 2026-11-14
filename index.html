@@ -5,16 +5,25 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/><script>/* Match the saved theme before the first paint. */
 try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved; } catch (_) {}
 </script>
-<title>Adonnis Blake — Product Engineer / AI Build Practice</title>
-<meta content="A simplified portfolio for Adonnis Blake: product engineering, Claude-assisted GitHub ticket work, live testing, UI/UX systems, and visual problem-solving." name="description"/>
-<meta content="Adonnis Blake — Portfolio" property="og:title"/>
-<meta content="Product engineering, Claude-assisted GitHub ticket work, live testing, UI/UX systems, and visual problem-solving with a concept-art edge." property="og:description"/>
+<title>Adonnis Blake — Design Engineer | UI, front-end &amp; product prototyping</title>
+<meta content="Design engineer who designs, builds, and ships product interfaces. Live apps, accessible front-end, and Claude-assisted workflows with every change tested live." name="description"/>
+<meta content="Adonnis Blake — Design Engineer" property="og:title"/>
+<meta content="I design interfaces and build them: live apps, accessible front-end, and changes tested in the real product." property="og:description"/>
 <meta content="website" property="og:type"/>
 <link href="assets/brand/adonnis-brand-icon.png" rel="icon" type="image/png"/>
 <link href="assets/brand/adonnis-brand-icon.png" rel="apple-touch-icon"/>
 <link as="image" href="assets/profile/adonnis-portrait.jpg" rel="preload"/>
 <link href="styles.css" rel="stylesheet"/><link href="interaction.css" rel="stylesheet"/><link href="navigation.css" rel="stylesheet"/><link href="work-showcase.css" rel="stylesheet"/><link href="scroll-story.css" rel="stylesheet"/>
 <link href="theme-contrast.css" rel="stylesheet"/><link href="studio-polish.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Adonnis Blake","jobTitle":"Design Engineer","sameAs":["https://github.com/adoblake"],"email":"mailto:adoblake@gmail.com"}</script>
+<style>
+.stack-strip dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 0}
+.stack-strip dl>div{padding:1rem;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:12px}
+.stack-strip dt{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.7}
+.stack-strip dd{margin:.35rem 0 0}
+.case-facts{font-size:.95rem;opacity:.85;margin:1rem 0}
+.evidence-links{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem}
+</style>
 </head>
 <body>
 <a class="skip" data-i18n="Skip to work" href="#work">Skip to work</a>
@@ -22,7 +31,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <header class="site-header" data-reveal="">
 <a aria-label="Adonnis Blake home" class="brand" href="index.html#top">
 <span class="brand-mark"><img alt="" src="assets/brand/adonnis-brand-icon.png"/></span>
-<span class="brand-copy"><strong>Adonnis Blake</strong><small data-i18n="Product Engineer · Design · Art">Product Engineer · Design · Art</small></span>
+<span class="brand-copy"><strong>Adonnis Blake</strong><small>Design Engineer · UI · Front-end</small></span>
 </a>
 <nav aria-label="Primary navigation" class="site-nav">
 <a data-i18n="Work" href="#work">Work</a>
@@ -30,7 +39,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <a data-i18n="About" href="about.html">About</a>
 <a data-i18n="Contact" href="#contact">Contact</a>
 <button aria-label="Switch color theme" class="theme-toggle" data-i18n="Dark" data-theme-toggle="" type="button">Dark</button>
-<label class="language-control"><span class="sr-only" data-i18n="Website language">Website language</span><select aria-label="Website language" data-language-select=""><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="zh">中文</option><option value="ja">日本語</option></select></label><button class="button button-dark nav-project-button" data-i18n="Start project" data-inquiry-open="" type="button">Start project</button>
+<label class="language-control"><span class="sr-only" data-i18n="Website language">Website language</span><select aria-label="Website language" data-language-select=""><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="zh">中文</option><option value="ja">日本語</option></select></label><a class="button button-dark nav-project-button" href="assets/resume/adonnis-blake-resume.pdf" target="_blank" rel="noopener">Résumé</a>
 </nav>
 <button aria-controls="mobileNav" aria-expanded="false" class="menu-button" data-i18n="Menu" type="button">Menu</button>
 </header>
@@ -40,28 +49,35 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <a data-i18n="About" href="about.html">About</a>
 <a data-i18n="Contact" href="#contact">Contact</a>
 <button aria-label="Switch color theme" class="theme-toggle" data-i18n="Dark" data-theme-toggle="" type="button">Dark</button>
-<label class="language-control"><span class="sr-only" data-i18n="Website language">Website language</span><select aria-label="Website language" data-language-select=""><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="zh">中文</option><option value="ja">日本語</option></select></label><button class="button button-dark" data-i18n="Start project" data-inquiry-open="" type="button">Start project</button>
+<label class="language-control"><span class="sr-only" data-i18n="Website language">Website language</span><select aria-label="Website language" data-language-select=""><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="zh">中文</option><option value="ja">日本語</option></select></label><a class="button button-dark" href="assets/resume/adonnis-blake-resume.pdf" target="_blank" rel="noopener">Résumé</a>
 </nav>
 <main id="top">
 <section aria-label="Portfolio introduction" class="hero apple-hero">
 <div class="hero-copy" data-reveal="">
-<p class="eyebrow" data-i18n="Portfolio / 2026">Portfolio / 2026</p>
-<h1 data-i18n="Product engineering that gets understood fast.">Product engineering that gets understood fast.</h1>
-<p class="lead" data-i18n="I’m Adonnis Blake — a Product Engineer grounded in concept art, graphic design, and UI/UX. I bring visual thinking to real product problems, using Claude, GitHub, and live testing to build experiences that work and make sense.">I’m Adonnis Blake — a Product Engineer grounded in concept art, graphic design, and UI/UX. I bring visual thinking to real product problems, using Claude, GitHub, and live testing to build experiences that work and make sense.</p>
-<div class="hero-actions">
-<a class="button button-dark" data-i18n="View selected work" href="#work">View selected work</a>
-<button class="button button-ghost" data-i18n="Start a project" data-inquiry-open="" type="button">Start a project</button>
-</div>
+<p class="eyebrow">Design Engineer · Open to roles</p>
+<h1>I design interfaces and build them.</h1>
+<p class="lead">I’m Adonnis Blake, a design engineer with a concept art and UI/UX background. I ship working front-end, design the flows behind it, and test every change in the live product. I use Claude to move faster on reasoning and edge cases; the decisions and the code review are mine.</p>
+<div class="hero-actions"><a class="button button-dark" href="#work">View live work</a> <a class="button button-ghost" href="assets/resume/adonnis-blake-resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a> <a class="button button-ghost" href="https://github.com/adoblake" target="_blank" rel="noopener">GitHub</a></div>
 </div>
 <aside aria-label="Portfolio summary card" class="hero-product" data-reveal="">
 <div class="hero-device">
 <img alt="Portrait of Adonnis Blake" data-hero-parallax="" src="assets/profile/adonnis-portrait.jpg"/>
 <div class="device-overlay">
 <span>AB</span>
-<p data-i18n="Product Engineer · Claude · GitHub · Live testing">Product Engineer · Claude · GitHub · Live testing</p>
+<p>Design Engineer · UI · Front-end · Live testing</p>
 </div>
 </div>
 </aside>
+</section>
+<section aria-labelledby="stack-title" class="section stack-strip">
+<p class="eyebrow" id="stack-title">Stack &amp; practices</p>
+<!-- Add Figma, React, TypeScript, etc. here ONLY if you can discuss them in an interview. -->
+<dl>
+<div><dt>Front-end</dt><dd>HTML · CSS · JavaScript</dd></div>
+<div><dt>Design</dt><dd>UI/UX · Concept art · Brand identity · Layout systems</dd></div>
+<div><dt>Quality</dt><dd>Accessibility (contrast, keyboard, reduced motion) · Responsive layouts · Light/dark theming · Automated checks (Python, Node)</dd></div>
+<div><dt>Workflow</dt><dd>GitHub · GitHub Actions · Claude · Live testing</dd></div>
+</dl>
 </section>
 <section aria-labelledby="quick-read-title" class="section quick-read">
 <div class="section-head compact" data-reveal="">
@@ -96,7 +112,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <div class="section-head compact" data-reveal="">
 <p class="eyebrow" data-i18n="Product engineering workflow">Product engineering workflow</p>
 <h2 data-i18n="From ticket to tested behavior." id="skill-update-title">From ticket to tested behavior.</h2>
-<p data-i18n="I can’t show every internal ticket or codebase, so this section explains the repeatable workflow: understand the ticket, use Claude to reason through options, make the smallest safe change, test the behavior live, then document what changed.">I can’t show every internal ticket or codebase, so this section explains the repeatable workflow: understand the ticket, use Claude to reason through options, make the smallest safe change, test the behavior live, then document what changed.</p>
+<p>This is the loop I follow on every build: understand the ticket, reason through options (with Claude where it helps), make the smallest safe change, test the behavior live, then document what changed. The proof is in the repos: this site’s own repo runs automated checks for color contrast, broken links, and translation coverage.</p><p class="evidence-links"><a class="text-button" href="https://github.com/adoblake/portfolio-pe/blob/main/check-theme-contrast.py" target="_blank" rel="noopener">Contrast check</a><a class="text-button" href="https://github.com/adoblake/portfolio-pe/blob/main/check-2day-links.js" target="_blank" rel="noopener">Link check</a><a class="text-button" href="https://github.com/adoblake/portfolio-pe/blob/main/check-site.py" target="_blank" rel="noopener">Site check</a></p>
 </div>
 <div class="engineering-workflow" data-reveal="">
 <div aria-label="Product engineering workflow preview" aria-live="off" class="workflow-visual" data-workflow-scroll="">
@@ -161,8 +177,8 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <section aria-labelledby="selected-work-title" class="section work-section" id="work">
 <div class="section-head compact" data-reveal="">
 <p class="eyebrow" data-i18n="Selected work">Selected work</p>
-<h2 data-i18n="Four focused projects. Product thinking first." id="selected-work-title">Four focused projects. Product thinking first.</h2>
-<p data-i18n="Each card gives the basic story. The product engineering focus leads; the design work supports the system behind it.">Each card gives the basic story. The product engineering focus leads; the design work supports the system behind it.</p>
+<h2 id="selected-work-title">Two live apps, two design projects.</h2>
+<p>The apps lead: designed, built, and tested live. Brand and web work follows.</p>
 </div>
 <div aria-label="Project filters" class="filter-row" data-reveal="">
 <button class="filter active" data-filter="all" data-i18n="All" type="button">All</button>
@@ -177,7 +193,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <img alt="2DAY Apps actual home layout preview" loading="lazy" src="assets/2day/2day-home-v12-1.png"/>
 </a>
 <div class="project-info">
-<p data-i18n="Product Engineering · AI-assisted app build">Product Engineering · AI-assisted app build</p>
+<p>Design Engineering · Built and tested live</p>
 <h3>2DAY Apps Journey</h3>
 <span data-i18n="Meal planning, daily follow-through, and editable calendar links — with a clear Home/Day flow and the latest Rising Bars identity.">Meal planning, daily follow-through, and editable calendar links — with a clear Home/Day flow and the latest Rising Bars identity.</span>
 <div class="card-actions">
@@ -186,9 +202,24 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </div>
 </div>
 </article>
+<article class="project-card" data-category="product" data-modal="bucketlist" data-reveal="">
+<a class="project-visual has-image visual-bucketlist" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="Try BUCKETLIST" aria-label="Try BUCKETLIST">
+<span class="project-number">02</span>
+<img alt="Bucketlist game-plan screen showing the next basketball run at Encanto Park" loading="lazy" src="assets/bucketlist/game-plan-dark.png"/>
+</a>
+<div class="project-info">
+<p data-i18n="Product Engineering · Basketball Community">Product Engineering · Basketball Community</p>
+<h3>Bucketlist</h3>
+<span data-i18n="Find an Arizona court, join a scheduled game, and coordinate your next run — from game plan to team chat.">Find an Arizona court, join a scheduled game, and coordinate your next run — from game plan to team chat.</span>
+<div class="card-actions">
+<a class="text-button" data-i18n="Try BUCKETLIST" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer">Try BUCKETLIST</a>
+<button class="text-button" data-i18n="View case study" data-modal-open="bucketlist" type="button">View case study</button>
+</div>
+</div>
+</article>
 <article class="project-card" data-category="web" data-modal="society" data-reveal="">
 <button aria-label="Open Society 5ive project" class="project-visual visual-society" data-modal-open="society" type="button">
-<span class="project-number">02</span>
+<span class="project-number">03</span>
 <div aria-hidden="true" class="society-mini">
 <div class="society-preview-masthead"><strong>Society 5ive</strong><i></i></div>
 <div class="society-preview-layout">
@@ -205,21 +236,6 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <button class="text-button" data-i18n="Open project" data-modal-open="society" type="button">Open project</button>
 <a class="text-button" data-i18n="Current site" href="https://society5ive.com/" rel="noreferrer" target="_blank">Current site</a>
 <a class="text-button" data-i18n="Revamp" href="assets/society5ive/index.html" rel="noreferrer" target="_blank">Revamp</a>
-</div>
-</div>
-</article>
-<article class="project-card" data-category="product" data-modal="bucketlist" data-reveal="">
-<a class="project-visual has-image visual-bucketlist" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="Try BUCKETLIST" aria-label="Try BUCKETLIST">
-<span class="project-number">03</span>
-<img alt="Bucketlist game-plan screen showing the next basketball run at Encanto Park" loading="lazy" src="assets/bucketlist/game-plan-dark.png"/>
-</a>
-<div class="project-info">
-<p data-i18n="Product Engineering · Basketball Community">Product Engineering · Basketball Community</p>
-<h3>Bucketlist</h3>
-<span data-i18n="Find an Arizona court, join a scheduled game, and coordinate your next run — from game plan to team chat.">Find an Arizona court, join a scheduled game, and coordinate your next run — from game plan to team chat.</span>
-<div class="card-actions">
-<a class="text-button" data-i18n="Try BUCKETLIST" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer">Try BUCKETLIST</a>
-<button class="text-button" data-i18n="View case study" data-modal-open="bucketlist" type="button">View case study</button>
 </div>
 </div>
 </article>
@@ -251,10 +267,12 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <p class="eyebrow" data-i18n="Featured case / Product Engineering">Featured case / Product Engineering</p>
 <h2 data-i18n="2DAY shows the shift from design thinking to product engineering." id="twoday-title">2DAY shows the shift from design thinking to product engineering.</h2>
 <p data-i18n="2DAY is still a product build journey, but the focus now sits closer to product engineering: translate the user goal, shape the logic, use AI assistance to accelerate the build, test the working version, and keep the interface simple enough that the next action is obvious.">2DAY is still a product build journey, but the focus now sits closer to product engineering: translate the user goal, shape the logic, use AI assistance to accelerate the build, test the working version, and keep the interface simple enough that the next action is obvious.</p>
+<p class="case-facts"><strong>Role:</strong> Design, front-end build, and live testing. <strong>Status:</strong> Live on GitHub Pages. <strong>Source:</strong> <a href="https://github.com/adoblake/2DAY-APP" target="_blank" rel="noopener">GitHub repo</a>.</p>
+<!-- TODO: add "Key decision" (what you chose, what you rejected, why) and "Result" (a real number or what you would measure next) -->
 <div class="case-actions">
 <a class="button button-dark" data-i18n="Try live 2DAY app" href="https://adoblake.github.io/2DAY-APP/" rel="noopener noreferrer" target="_blank">Try live 2DAY app</a>
 <button class="button button-ghost" data-i18n="View case study" data-modal-open="twoday" type="button">View case study</button>
-<button class="button button-ghost" data-i18n="Start project" data-inquiry-open="" type="button">Start project</button>
+<button class="button button-ghost" data-inquiry-open="" type="button">Get in touch</button>
 </div>
 </div>
 <div class="app-showcase" data-reveal="">
@@ -269,6 +287,35 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <li data-i18n="Revise the plan without losing journey progress">Revise the plan without losing journey progress</li>
 <li data-i18n="Google and Outlook links open editable calendar events">Google and Outlook links open editable calendar events</li>
 <li data-i18n="Home and Day keep daily actions clear; Share / QR helps pass the app along">Home and Day keep daily actions clear; Share / QR helps pass the app along</li>
+</ul>
+</div>
+</div>
+</section>
+<section aria-labelledby="bucketlist-title" class="section product-section split-case app-case" id="bucketlist-case">
+<div class="case-copy" data-reveal="">
+<p class="eyebrow" data-i18n="Product engineering / Bucketlist">Product engineering / Bucketlist</p>
+<h2 data-i18n="From finding a court to getting a game together." id="bucketlist-title">From finding a court to getting a game together.</h2>
+<p data-i18n="Bucketlist brings court discovery, scheduled games, and team coordination into one clear mobile journey. Find a place to play, see the next run, and keep the path from planning to playing easy to follow.">Bucketlist brings court discovery, scheduled games, and team coordination into one clear mobile journey. Find a place to play, see the next run, and keep the path from planning to playing easy to follow.</p>
+<p class="case-facts"><strong>Role:</strong> Design, front-end build, and live testing. <strong>Status:</strong> Working prototype; games and stats are browser-local, shared chat uses authenticated accounts. <strong>Source:</strong> <a href="https://github.com/adoblake/bucketlist" target="_blank" rel="noopener">GitHub repo</a>.</p>
+<!-- TODO: add "Key decision" and "Result" -->
+<div class="case-actions">
+<a class="button button-dark" data-i18n="Try BUCKETLIST" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer">Try BUCKETLIST</a>
+<button class="button button-ghost" data-i18n="View case study" data-modal-open="bucketlist" type="button">View case study</button>
+<button class="button button-ghost" data-inquiry-open="" type="button">Get in touch</button>
+</div>
+</div>
+<div class="app-showcase" data-reveal="">
+<a class="app-proof" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="Try BUCKETLIST" aria-label="Try BUCKETLIST">
+<img alt="Bucketlist game-plan home with the next basketball run and demonstration progress" loading="lazy" src="assets/bucketlist/game-plan-dark.png"/>
+</a>
+<div class="app-proof-notes">
+<p class="eyebrow" data-i18n="Actual app layout">Actual app layout</p>
+<h3 data-i18n="Find your court. Plan your next run.">Find your court. Plan your next run.</h3>
+<ul>
+<li data-i18n="Game-plan home brings the next run and personal progress together">Game-plan home brings the next run and personal progress together</li>
+<li data-i18n="Courts, Games, Chat, and Stats keep the main paths direct">Courts, Games, Chat, and Stats keep the main paths direct</li>
+<li data-i18n="Shared groups and chat support team coordination">Shared groups and chat support team coordination</li>
+<li data-i18n="Games and stats are browser-local prototypes; shared chat uses authenticated accounts">Games and stats are browser-local prototypes; shared chat uses authenticated accounts</li>
 </ul>
 </div>
 </div>
@@ -301,33 +348,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </div>
 </div>
 </section>
-<section aria-labelledby="bucketlist-title" class="section product-section split-case app-case" id="bucketlist-case">
-<div class="case-copy" data-reveal="">
-<p class="eyebrow" data-i18n="Product engineering / Bucketlist">Product engineering / Bucketlist</p>
-<h2 data-i18n="From finding a court to getting a game together." id="bucketlist-title">From finding a court to getting a game together.</h2>
-<p data-i18n="Bucketlist brings court discovery, scheduled games, and team coordination into one clear mobile journey. Find a place to play, see the next run, and keep the path from planning to playing easy to follow.">Bucketlist brings court discovery, scheduled games, and team coordination into one clear mobile journey. Find a place to play, see the next run, and keep the path from planning to playing easy to follow.</p>
-<div class="case-actions">
-<a class="button button-dark" data-i18n="Try BUCKETLIST" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer">Try BUCKETLIST</a>
-<button class="button button-ghost" data-i18n="View case study" data-modal-open="bucketlist" type="button">View case study</button>
-<button class="button button-ghost" data-i18n="Start project" data-inquiry-open="" type="button">Start project</button>
-</div>
-</div>
-<div class="app-showcase" data-reveal="">
-<a class="app-proof" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="Try BUCKETLIST" aria-label="Try BUCKETLIST">
-<img alt="Bucketlist game-plan home with the next basketball run and demonstration progress" loading="lazy" src="assets/bucketlist/game-plan-dark.png"/>
-</a>
-<div class="app-proof-notes">
-<p class="eyebrow" data-i18n="Actual app layout">Actual app layout</p>
-<h3 data-i18n="Find your court. Plan your next run.">Find your court. Plan your next run.</h3>
-<ul>
-<li data-i18n="Game-plan home brings the next run and personal progress together">Game-plan home brings the next run and personal progress together</li>
-<li data-i18n="Courts, Games, Chat, and Stats keep the main paths direct">Courts, Games, Chat, and Stats keep the main paths direct</li>
-<li data-i18n="Shared groups and chat support team coordination">Shared groups and chat support team coordination</li>
-<li data-i18n="Games and stats are browser-local prototypes; shared chat uses authenticated accounts">Games and stats are browser-local prototypes; shared chat uses authenticated accounts</li>
-</ul>
-</div>
-</div>
-</section>
+
 <section aria-labelledby="method-title" class="section method-section" id="method">
 <div class="section-head compact" data-reveal="">
 <p class="eyebrow" data-i18n="Method">Method</p>
@@ -344,10 +365,10 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <section aria-labelledby="contact-title" class="section contact-section" id="contact">
 <div class="contact-card" data-reveal="">
 <p class="eyebrow" data-i18n="Contact">Contact</p>
-<h2 data-i18n="Have a product problem that needs a clearer path?" id="contact-title">Have a product problem that needs a clearer path?</h2>
-<p data-i18n="Send the basics. I’ll help break it down into the ticket, the user impact, the likely solution path, and the version worth testing.">Send the basics. I’ll help break it down into the ticket, the user impact, the likely solution path, and the version worth testing.</p>
+<h2 id="contact-title">Hiring for a design engineer?</h2>
+<p>Here’s my résumé and the fastest way to reach me. I’m happy to walk through any project, the decisions behind it, and how I tested it.</p>
 <div class="contact-actions">
-<button class="button button-paper" data-i18n="Start project" data-inquiry-open="" type="button">Start project</button>
+<a class="button button-paper" href="assets/resume/adonnis-blake-resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
 <a class="button button-outline-paper" data-i18n="Email directly" href="mailto:adoblake@gmail.com">Email directly</a>
 </div>
 </div>
@@ -394,7 +415,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <form class="inquiry-form" id="inquiryForm">
 <label><span data-i18n="Name">Name</span><input data-i18n-placeholder="Your name" name="name" placeholder="Your name" required="" type="text"/></label>
 <label><span data-i18n="Email">Email</span><input data-i18n-placeholder="you@email.com" name="email" placeholder="you@email.com" required="" type="email"/></label>
-<label><span data-i18n="Project type">Project type</span><select name="type"><option>Product engineering / UI UX</option><option>Brand identity</option><option>Website / landing page</option><option>Creative direction / brand system</option><option>Not sure yet</option></select></label>
+<label><span data-i18n="Project type">Project type</span><select name="type"><option>Full-time design engineer role</option><option>Contract / freelance</option><option>Product engineering / UI UX</option><option>Brand identity</option><option>Website / landing page</option><option>Creative direction / brand system</option><option>Not sure yet</option></select></label>
 <label><span data-i18n="Timeline">Timeline</span><select name="timeline"><option>Just exploring</option><option>This month</option><option>1–3 months</option><option>3+ months</option></select></label>
 <label><span data-i18n="Budget / scope">Budget / scope</span><select name="budget"><option>Small focused pass</option><option>Medium project</option><option>Large / ongoing build</option><option>Need help scoping</option></select></label>
 <label class="full"><span data-i18n="Message">Message</span><textarea data-i18n-placeholder="What are you trying to make? What should people understand?" name="message" placeholder="What are you trying to make? What should people understand?" required="" rows="5"></textarea></label>
