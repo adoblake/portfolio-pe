@@ -27,15 +27,26 @@
   const menu = $('.menu-button');
   const mobileNav = $('#mobileNav');
   if (menu && mobileNav) {
-    menu.addEventListener('click', () => {
-      const open = menu.getAttribute('aria-expanded') !== 'true';
+    const mobileWidth = matchMedia('(max-width: 1180px)');
+    const setMenu = open => {
       menu.setAttribute('aria-expanded', String(open));
+      mobileNav.hidden = !open;
       mobileNav.classList.toggle('is-open', open);
+    };
+    setMenu(false);
+    menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+    $$('a', mobileNav).forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        menu.focus();
+      }
     });
-    $$('a',mobileNav).forEach(link => link.addEventListener('click', () => {
-      menu.setAttribute('aria-expanded','false');
-      mobileNav.classList.remove('is-open');
-    }));
+    mobileWidth.addEventListener('change', () => {
+      const hadFocus = mobileNav.contains(document.activeElement);
+      setMenu(false);
+      if (hadFocus) (mobileWidth.matches ? menu : $('.site-nav a'))?.focus();
+    });
   }
 
   // Reveal is disabled for reduced-motion and if IntersectionObserver is unavailable.
@@ -92,6 +103,7 @@
 
   // Keep old filters and project card display and order untouched.
   const filterButtons = $$('.filter');
+  filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.classList.contains('active'))));
   filterButtons.forEach(button => button.addEventListener('click', () => {
     filterButtons.forEach(b => {b.classList.toggle('active',b===button); b.setAttribute('aria-pressed',String(b===button));});
     $$('.project-card').forEach(card=>card.classList.toggle('is-hidden', button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter));
@@ -133,24 +145,43 @@
 
   // Central modal management preserves focus, Escape and scroll locking.
   let activeDialog=null, focusBefore=null, activeProjectKey=null;
+  const backgroundState = new Map();
   const openDialog = element => {
-    if(!element)return;
-    if(activeDialog)closeDialog(activeDialog,false);
-    focusBefore=document.activeElement;
-    element.classList.add('is-open');element.setAttribute('aria-hidden','false');
-    activeDialog=element;body.classList.add('modal-open');
-    (element.querySelector('[data-modal-close],[data-image-close],[data-inquiry-close]') || element.querySelector('button'))?.focus();
+    if (!element || activeDialog === element) return;
+    if (activeDialog) closeDialog(activeDialog, false);
+    focusBefore = document.activeElement;
+    element.hidden = false;
+    element.inert = false;
+    element.classList.add('is-open');
+    element.setAttribute('aria-hidden', 'false');
+    activeDialog = element;
+    body.classList.add('modal-open');
+    // Focus a real control, never the non-focusable backdrop.
+    element.querySelector('button[data-modal-close],button[data-image-close],button[data-inquiry-close]')?.focus();
+    for (const sibling of body.children) {
+      if (sibling === element) continue;
+      backgroundState.set(sibling, sibling.inert);
+      sibling.inert = true;
+    }
   };
-  const closeDialog = (element,restore=true) => {
-    if(!element)return;
-    element.classList.remove('is-open');element.setAttribute('aria-hidden','true');
-    if(activeDialog===element){activeDialog=null;body.classList.remove('modal-open');}
-    if(restore)focusBefore?.focus?.();
+  const closeDialog = (element, restore = true) => {
+    if (!element) return;
+    if (activeDialog === element) {
+      for (const [sibling, inert] of backgroundState) sibling.inert = inert;
+      backgroundState.clear();
+      activeDialog = null;
+      body.classList.remove('modal-open');
+      if (restore) focusBefore?.focus?.();
+    }
+    element.classList.remove('is-open');
+    element.setAttribute('aria-hidden', 'true');
+    element.inert = true;
+    element.hidden = true;
   };
   document.addEventListener('keydown',event => {
     if(event.key==='Escape' && activeDialog){closeDialog(activeDialog);return;}
     if(event.key!=='Tab'||!activeDialog)return;
-    const controls=$$('button:not([disabled]),a[href],input,select,textarea,[tabindex="0"]',activeDialog).filter(n => n.getClientRects().length);
+    const controls=$$('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex="0"]',activeDialog).filter(n => n.getClientRects().length);
     if(!controls.length)return;
     const first=controls[0],last=controls.at(-1);
     if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
@@ -203,7 +234,7 @@
     $('#modalExamplesToggle').setAttribute('aria-expanded',String(now));
     $('#modalExamplesToggle').textContent=translate(now?'Less':'More');
   });
-  window.addEventListener('portfolio:language',()=>{if(activeProjectKey && $('#projectModal')?.classList.contains('is-open')){closeDialog($('#projectModal'),false);renderProject(activeProjectKey);}});
+  window.addEventListener('portfolio:language',()=>{if(activeProjectKey && $('#projectModal')?.classList.contains('is-open')){renderProject(activeProjectKey);}});
 
   const form=$('#inquiryForm');
   form?.addEventListener('submit',event=>{
