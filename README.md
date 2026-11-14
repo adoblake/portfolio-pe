@@ -1,36 +1,48 @@
-# Adonnis Blake — Product Engineer Portfolio
+# Adonnis Blake — Design Engineer Portfolio
 
-**Round 31.7 — Interactive workflow and full-site language controls**
+A static portfolio showing design-engineering work: two live apps (2DAY and Bucketlist), plus brand and web projects, with case studies, light/dark theming, and five-language support.
 
-This static site is based on **Round 31.6.4**, using its exact layout, images, project cards, typography, and About page as the starting point.
+<!-- Add your live URL here, e.g. **Live site:** https://adoblake.github.io/portfolio-pe/ -->
 
-## What's new
-- Scroll-linked workflow focus: the left preview emphasizes whichever step on the right is nearest the center of the viewport. `<details>` tabs remain manually expandable and keyboard-accessible.
-- Subtle hero portrait depth during desktop scrolling; small project-card reveal/hover motion.
-- Motion automatically reduces or stops when the visitor requests reduced motion.
-- Full portfolio-language selection in desktop and mobile menus: English, Español, Français, 简体中文, 日本語.
-- Translation covers the **portfolio site**: Home, About, headings, content, workflow explanations, selected project cards, project details, inquiries and select menus. Proper project/brand names and images retain their original artwork.
-- Language selection persists via local storage and a `?lang=` link parameter between Home and About. English remains the default.
-- Replaced an old JavaScript file that referred to outdated modal IDs, so project/image/inquiry modal handlers now match the actual markup.
+## What it demonstrates
+
+- **Front-end craft:** hand-written HTML, CSS, and JavaScript with no framework or build step.
+- **Accessibility:** skip link, keyboard-operable modals and accordions, reduced-motion support, and an automated color-contrast check for both themes.
+- **Responsive design:** desktop and mobile navigation, scroll-linked workflow section, light/dark theme with saved preference.
+- **Internationalization:** English, Español, Français, 简体中文, 日本語 (`i18n.js`), with a translation-key coverage check.
+- **Quality habits:** scripted checks for contrast, links, and site structure (see below).
+
+## Stack
+
+HTML · CSS · JavaScript · Python and Node (check scripts) · GitHub Actions
 
 ## Run it
-Open `index.html` in a browser, or serve the folder as static files. For example, from this directory:
 
-```sh
+```
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`. No backend, account, external localization API, or build system is required.
+Open `http://localhost:8000`. No backend, account, or build system is required.
 
-## Files
-- `index.html`: Home / work / workflow
-- `about.html`: About page
-- `styles.css`: original Round 31.6.4 styles
-- `interaction.css`: small additions for the motion, controls and modal layouts
-- `i18n.js`: human-authored language packs and selector logic
-- `script.js`: interactions and translated project dialogs
-- `assets/`: original project and portrait assets
+## Checks
 
-**Note:** External client sites and separately linked app demonstrations are independent products and are not translated by this portfolio's menu. Professional native-speaker copy review is recommended before public launch.
+| Script | What it checks |
+| --- | --- |
+| `check-site.py` | Site structure and asset references |
+| `check-theme-contrast.py` | Text/background contrast in both themes |
+| `check-2day-links.js` | Links to the 2DAY app |
+| `check-studio-copy.js` | Copy consistency |
 
-**Validation:** HTML asset references, script syntax, translation-key coverage, and CSS parsing were checked. Automated Chromium preview was blocked by this environment's browser policy, so complete visual/interaction QA still needs to be performed in a real browser before deployment.
+## Structure
+
+- `index.html` — home, work, workflow, contact
+- `about.html` — about page
+- `styles.css` plus `interaction.css`, `navigation.css`, `work-showcase.css`, `scroll-story.css`, `studio-polish.css`, `theme-contrast.css` — layered styles
+- `i18n.js` — language packs and selector
+- `script.js`, `scroll-story.js` — interactions
+- `assets/` — project and portrait images
+
+## Notes
+
+- Linked client sites and app demos are separate products and are not translated by this site's language menu.
+- Translations have not had native-speaker review.
