@@ -1,6 +1,6 @@
 # Accessibility review — November 14, 2026
 
-Target: WCAG 2.2 Level AA for the portfolio Home and About pages and their shared navigation, project/image dialogs, and inquiry form. This is an implementation review, not a conformance certification. Linked apps and the separately linked Society 5ive demonstration are outside this review.
+Target: WCAG 2.2 Level AA for the portfolio Home and About pages and their shared navigation, project/image dialogs, and inquiry form. This is an implementation review, not a conformance certification. Linked apps and external sites (including phalinx.space) are outside this review.
 
 ## Findings and changes
 

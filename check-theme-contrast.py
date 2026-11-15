@@ -43,6 +43,8 @@ for mode, theme in [("light", light), ("dark", dark)]:
     ]
 checks += [
     ("society number on cream", "#38362f", "#d9d3c8", 4.5),
+    ("Phalinx number on lavender", "#10122f", "#e4e4ec", 4.5),
+    ("Phalinx pill text on navy", "#ffffff", "#10122f", 4.5),
     ("2DAY number on black", "#f7f7f2", "#0a0a0a", 4.5),
     ("Naples number on navy", "#f7f7f2", "#12222e", 4.5),
     ("Neighbors number on black", "#f7f7f2", "#050505", 4.5),
@@ -62,7 +64,7 @@ for name, foreground, background, minimum in checks:
 css = Path("theme-contrast.css").read_text()
 for path in ["index.html", "about.html"]:
     html = Path(path).read_text()
-    if html.count('href="theme-contrast.css"') != 1:
+    if len(re.findall(r'href="theme-contrast\.css(?:\?v=[0-9a-f]+)?"', html)) != 1:
         errors.append(f"{path} should load contrast stylesheet once")
     if "portfolio-theme" not in html.split("</head>")[0]:
         errors.append(f"{path} should load saved theme before first paint")

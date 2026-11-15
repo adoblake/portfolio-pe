@@ -24,6 +24,7 @@ jobs:
         run: |
           python3 check-site.py
           python3 check-theme-contrast.py
+          python3 asset-versions.py --check
 
   accessibility:
     runs-on: ubuntu-latest
