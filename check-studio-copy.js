@@ -26,7 +26,7 @@ for (const language of languages) {
   }
 }
 for (const [page, source] of [['Home', home], ['About', about]]) {
-  assert.equal((source.match(/href="studio-polish\.css"/g)||[]).length, 1, page + ' should load studio CSS once');
+  assert.equal((source.match(/href="studio-polish\.css(?:\?v=[0-9a-f]+)?"/g)||[]).length, 1, page + ' should load studio CSS once');
   assert.ok(source.includes('Design Engineer · UI · Front-end'), page + ' missing creative branding');
 }
 for (const token of ['.button.button-ghost', '.contact-card .button.button-outline-paper',

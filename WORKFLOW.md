@@ -7,7 +7,7 @@
 1. Start from the latest reviewed `main` branch. Do not start from an old ZIP or unrelated BucketList repository.
 2. Create a short-lived branch such as `round-31-8-hero-polish`.
 3. Change only the approved scope, preserving the current two-font system, project imagery, layout, modals and all five languages.
-4. Commit **all source and asset changes**. Run `node --check script.js`, `node --check i18n.js`, and `python3 check-site.py`.
+4. Commit **all source and asset changes**. Run `python3 asset-versions.py` after any CSS or JS change (it refreshes the `?v=` cache tags in `index.html` and `about.html`), then `node --check script.js`, `node --check i18n.js`, and `python3 check-site.py`.
 5. Open a pull request with a before/after summary and visual checks. Merge after review, then base the next iteration on `main`.
 
 The Instagram motion reference informs restrained motion, not a replacement of the Round 31 design. The portfolio is a distinct project from `adoblake/making-bucketlist`.

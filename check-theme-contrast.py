@@ -64,7 +64,7 @@ for name, foreground, background, minimum in checks:
 css = Path("theme-contrast.css").read_text()
 for path in ["index.html", "about.html"]:
     html = Path(path).read_text()
-    if html.count('href="theme-contrast.css"') != 1:
+    if len(re.findall(r'href="theme-contrast\.css(?:\?v=[0-9a-f]+)?"', html)) != 1:
         errors.append(f"{path} should load contrast stylesheet once")
     if "portfolio-theme" not in html.split("</head>")[0]:
         errors.append(f"{path} should load saved theme before first paint")
