@@ -43,6 +43,8 @@ for mode, theme in [("light", light), ("dark", dark)]:
     ]
 checks += [
     ("society number on cream", "#38362f", "#d9d3c8", 4.5),
+    ("Phalinx number on lavender", "#10122f", "#e4e4ec", 4.5),
+    ("Phalinx pill text on navy", "#ffffff", "#10122f", 4.5),
     ("2DAY number on black", "#f7f7f2", "#0a0a0a", 4.5),
     ("Naples number on navy", "#f7f7f2", "#12222e", 4.5),
     ("Neighbors number on black", "#f7f7f2", "#050505", 4.5),
