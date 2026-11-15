@@ -106,12 +106,12 @@
       pictures:['assets/2day/2day-home-v12-1.png','assets/2day/2day-current-day.png','assets/2day/2day-current-calendar.png','assets/2day/2day-current-guidance.png'],
       links:[['Try live 2DAY app','https://adoblake.github.io/2DAY-APP/']]
     },
-    society: {
-      title:'Society 5ive Site Restructure', label:'Web Strategy · Interior Design',
-      intro:'Restructuring an interior design website so services, work samples, and contact paths are easier to understand.',
-      role:'Web / Product Designer',status:'Revamp exploration',focus:'Information architecture, service clarity, visual rhythm',
-      points:['Study the current website before redesigning the experience.','Clarify the path from services to relevant work and inquiries.','Create a flexible multi-page revamp for review and iteration.'],
-      pictures:[],links:[['Current site','https://society5ive.com/'],['Revamp','assets/society5ive/index.html']]
+    phalinx: {
+      title:'Phalinx', label:'Web Strategy · Brand + Web Studio',
+      intro:"The website for Phalinx, a brand identity and web design studio. It turns a creative service into something a small business can understand, price, and start on its own.",
+      role:'Designer / Front-end builder',status:'Live site',focus:'Service packaging, pricing clarity, inquiry flow',
+      points:["Define the offer first: three fixed-scope packages with starting prices, so the page can sell something specific.", "Order every section around the buyer’s questions: what you do, proof, cost, how to pay, and what happens next.", "Lower the barrier to starting: milestone payments, a returning-client credit, and an inquiry form that asks for budget and timing up front."],
+      pictures:['assets/phalinx/phalinx-home.png'],links:[['Visit Phalinx','https://phalinx.space/']]
     },
     bucketlist: {
       title:'Bucketlist',label:'Product Engineering · Basketball Community',
