@@ -311,6 +311,7 @@
   place-items: stretch;
   padding: 18px !important;
   background: #e4e4ec;
+  cursor: pointer; /* decorative preview; the "Open project" button is the accessible control */
 }
 .work-section .visual-phalinx .project-number { color: #10122f; }
 .work-section .visual-phalinx .phalinx-mini {

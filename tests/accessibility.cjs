@@ -50,6 +50,11 @@ const tags = ['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa','best-practice'
       ['[data-inquiry-open]','#inquiryModal']
     ] : [['[data-inquiry-open]','#inquiryModal']];
     for (const [trigger,id] of dialogs) {
+      if (await page.locator(trigger).count() === 0) {
+        // No control opens this dialog on this page: it must stay hidden and out of the focus order.
+        assert(await page.locator(id).evaluate(e=>e.hidden&&e.inert), `Unreachable dialog ${id} must stay hidden and inert`);
+        continue;
+      }
       const opener = page.locator(trigger).first();
       await opener.click();
       assert(await page.locator(id).evaluate(e=>e.contains(document.activeElement)), 'Initial dialog focus');
