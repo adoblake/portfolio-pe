@@ -13,7 +13,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <link href="assets/brand/adonnis-brand-icon.png" rel="icon" type="image/png"/>
 <link href="assets/brand/adonnis-brand-icon.png" rel="apple-touch-icon"/>
 <link as="image" href="assets/profile/adonnis-portrait.jpg" rel="preload"/>
-<link href="styles.css?v=574af43b25" rel="stylesheet"/><link href="interaction.css?v=c7dfd8cf5f" rel="stylesheet"/><link href="navigation.css?v=df268bb4ef" rel="stylesheet"/><link href="work-showcase.css?v=c7a0481108" rel="stylesheet"/><link href="scroll-story.css?v=0881466326" rel="stylesheet"/>
+<link href="styles.css?v=1c3d6984ef" rel="stylesheet"/><link href="interaction.css?v=c7dfd8cf5f" rel="stylesheet"/><link href="navigation.css?v=df268bb4ef" rel="stylesheet"/><link href="work-showcase.css?v=c7a0481108" rel="stylesheet"/><link href="scroll-story.css?v=0881466326" rel="stylesheet"/>
 <link href="theme-contrast.css?v=f7cd2ef5aa" rel="stylesheet"/><link href="studio-polish.css?v=4f4edba51f" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Adonnis Blake","jobTitle":"Design Engineer","sameAs":["https://github.com/adoblake"],"email":"mailto:adoblake@gmail.com"}</script>
 <style>
@@ -29,7 +29,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <a class="skip" data-i18n="Skip to work" href="#work">Skip to work</a>
 <div aria-hidden="true" class="grain"></div>
 <header class="site-header" data-reveal="">
-<a aria-label="Adonnis Blake home" class="brand" href="index.html#top">
+<a class="brand" href="index.html#top">
 <span class="brand-mark"><img alt="" src="assets/brand/adonnis-brand-icon.png"/></span>
 <span class="brand-copy"><strong>Adonnis Blake</strong><small data-i18n="Design Engineer · UI · Front-end">Design Engineer · UI · Front-end</small></span>
 </a>
@@ -38,17 +38,17 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <a data-i18n="Method" href="#method">Method</a>
 <a data-i18n="About" href="about.html">About</a>
 <a data-i18n="Contact" href="#contact">Contact</a>
-<button aria-label="Switch color theme" class="theme-toggle" data-i18n="Dark" data-theme-toggle="" type="button">Dark</button>
+<button class="theme-toggle" data-i18n="Dark" data-theme-toggle="" type="button">Dark</button>
 <label class="language-control"><span class="sr-only" data-i18n="Website language">Website language</span><select aria-label="Website language" data-language-select=""><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="zh">中文</option><option value="ja">日本語</option></select></label><a class="button button-dark nav-project-button" href="assets/resume/adonnis-blake-resume.pdf" target="_blank" rel="noopener">Résumé</a>
 </nav>
 <button aria-controls="mobileNav" aria-expanded="false" class="menu-button" data-i18n="Menu" type="button">Menu</button>
 </header>
-<nav aria-label="Mobile navigation" class="mobile-nav" id="mobileNav">
+<nav aria-label="Mobile navigation" class="mobile-nav" hidden id="mobileNav">
 <a data-i18n="Work" href="#work">Work</a>
 <a data-i18n="Method" href="#method">Method</a>
 <a data-i18n="About" href="about.html">About</a>
 <a data-i18n="Contact" href="#contact">Contact</a>
-<button aria-label="Switch color theme" class="theme-toggle" data-i18n="Dark" data-theme-toggle="" type="button">Dark</button>
+<button class="theme-toggle" data-i18n="Dark" data-theme-toggle="" type="button">Dark</button>
 <label class="language-control"><span class="sr-only" data-i18n="Website language">Website language</span><select aria-label="Website language" data-language-select=""><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="zh">中文</option><option value="ja">日本語</option></select></label><a class="button button-dark" href="assets/resume/adonnis-blake-resume.pdf" target="_blank" rel="noopener">Résumé</a>
 </nav>
 <main id="top">
@@ -85,7 +85,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <h2 data-i18n="A product engineer built on a creative foundation." id="quick-read-title">A product engineer built on a creative foundation.</h2>
 <p data-i18n="I learned to communicate through images, stories, and interfaces before I wrote product code. That perspective shapes how I read tickets, map user journeys, work with AI, and test what people actually experience.">I learned to communicate through images, stories, and interfaces before I wrote product code. That perspective shapes how I read tickets, map user journeys, work with AI, and test what people actually experience.</p>
 </div>
-<div aria-label="Core creative lanes" class="feature-strip quick-lanes" data-reveal="">
+<div role="group" aria-label="Core creative lanes" class="feature-strip quick-lanes" data-reveal="">
 <article><span>01</span><h3 data-i18n="Product engineering">Product engineering</h3><p data-i18n="Turning real tickets into product fixes, working behavior, and testable improvements.">Turning real tickets into product fixes, working behavior, and testable improvements.</p></article>
 <article><span>02</span><h3 data-i18n="Art + design thinking">Art + design thinking</h3><p data-i18n="Concept art, comics, and UX trained me to see the whole journey — not just a screen or line of code.">Concept art, comics, and UX trained me to see the whole journey — not just a screen or line of code.</p></article>
 <article><span>03</span><h3 data-i18n="AI-assisted solving">AI-assisted solving</h3><p data-i18n="Using Claude as a build partner to reason through code, edge cases, and solution paths.">Using Claude as a build partner to reason through code, edge cases, and solution paths.</p></article>
@@ -115,7 +115,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <p>This is the loop I follow on every build: understand the ticket, reason through options (with Claude where it helps), make the smallest safe change, test the behavior live, then document what changed. The proof is in the repos: this site’s own repo runs automated checks for color contrast, broken links, and translation coverage.</p><p class="evidence-links"><a class="text-button" href="https://github.com/adoblake/portfolio-pe/blob/main/check-theme-contrast.py" target="_blank" rel="noopener">Contrast check</a><a class="text-button" href="https://github.com/adoblake/portfolio-pe/blob/main/check-2day-links.js" target="_blank" rel="noopener">Link check</a><a class="text-button" href="https://github.com/adoblake/portfolio-pe/blob/main/check-site.py" target="_blank" rel="noopener">Site check</a></p>
 </div>
 <div class="engineering-workflow" data-reveal="">
-<div aria-label="Product engineering workflow preview" aria-live="off" class="workflow-visual" data-workflow-scroll="">
+<div role="group" aria-label="Product engineering workflow preview" aria-live="off" class="workflow-visual" data-workflow-scroll="">
 <div class="workflow-window">
 <div class="workflow-window-top">
 <span></span><span></span><span></span>
@@ -130,7 +130,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </ol>
 </div>
 </div>
-<div aria-label="Product engineering focus areas" class="workflow-accordion">
+<div role="group" aria-label="Product engineering focus areas" class="workflow-accordion">
 <details class="workflow-tab is-current" data-step="1" open="">
 <summary><span>01</span><strong data-i18n="GitHub ticket">GitHub ticket</strong></summary>
 <div class="workflow-tab-body">
@@ -174,22 +174,22 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </div>
 </div>
 </section>
-<section aria-labelledby="selected-work-title" class="section work-section" id="work">
+<section aria-labelledby="selected-work-title" class="section work-section" id="work" tabindex="-1">
 <div class="section-head compact" data-reveal="">
 <p class="eyebrow" data-i18n="Selected work">Selected work</p>
 <h2 id="selected-work-title">Two live apps, two design projects.</h2>
 <p>The apps lead: designed, built, and tested live. Brand and web work follows.</p>
 </div>
-<div aria-label="Project filters" class="filter-row" data-reveal="">
+<div role="group" aria-label="Project filters" class="filter-row" data-reveal="">
 <button class="filter active" data-filter="all" data-i18n="All" type="button">All</button>
 <button class="filter" data-filter="product" data-i18n="Product" type="button">Product</button>
 <button class="filter" data-filter="brand" data-i18n="Brand" type="button">Brand</button>
 <button class="filter" data-filter="web" data-i18n="Web" type="button">Web</button>
 </div>
-<div aria-label="Selected projects" class="work-grid">
+<div role="group" aria-label="Selected projects" class="work-grid">
 <article class="project-card" data-category="product" data-modal="twoday" data-reveal="">
-<a class="project-visual has-image visual-twoday" href="https://adoblake.github.io/2DAY-APP/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="Try live 2DAY app" aria-label="Try live 2DAY app">
-<span class="project-number">01</span>
+<a class="project-visual has-image visual-twoday" href="https://adoblake.github.io/2DAY-APP/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="01 — Try live 2DAY app" aria-label="01 — Try live 2DAY app">
+<span aria-hidden="true" class="project-number">01</span>
 <img alt="2DAY Apps actual home layout preview" loading="lazy" src="assets/2day/2day-home-v12-1.png"/>
 </a>
 <div class="project-info">
@@ -203,8 +203,8 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </div>
 </article>
 <article class="project-card" data-category="product" data-modal="bucketlist" data-reveal="">
-<a class="project-visual has-image visual-bucketlist" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="Try BUCKETLIST" aria-label="Try BUCKETLIST">
-<span class="project-number">02</span>
+<a class="project-visual has-image visual-bucketlist" href="https://adoblake.github.io/bucketlist/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="02 — Try Bucketlist" aria-label="02 — Try Bucketlist">
+<span aria-hidden="true" class="project-number">02</span>
 <img alt="Bucketlist game-plan screen showing the next basketball run at Encanto Park" loading="lazy" src="assets/bucketlist/game-plan-dark.png"/>
 </a>
 <div class="project-info">
@@ -218,8 +218,8 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </div>
 </article>
 <article class="project-card" data-category="web" data-modal="phalinx" data-reveal="">
-<button aria-label="Open Phalinx project" data-i18n-aria-label="Open Phalinx project" class="project-visual visual-phalinx" data-modal-open="phalinx" type="button">
-<span class="project-number">03</span>
+<button data-i18n-aria-label="03 Phalinx — Open project" aria-label="03 Phalinx — Open project" class="project-visual visual-phalinx" data-modal-open="phalinx" type="button">
+<span aria-hidden="true" class="project-number">03</span>
 <div aria-hidden="true" class="phalinx-mini">
 <div class="phalinx-preview-nav"><strong>phalinx</strong><i>Start a Conversation</i></div>
 <p class="phalinx-preview-headline">Good design gets attention. <span>Great design moves business forward.</span></p>
@@ -237,8 +237,8 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </div>
 </article>
 <article class="project-card" data-category="brand" data-modal="neighbors" data-reveal="">
-<button class="project-visual has-image visual-neighbor" data-caption="Neighbors Bar — custom wordmark exploration" data-image="assets/neighbors/neighbors-wordmark.png" type="button">
-<span class="project-number">04</span>
+<button data-i18n-aria-label="04 — View Neighbors Bar image" aria-label="04 — View Neighbors Bar image" class="project-visual has-image visual-neighbor" data-caption="Neighbors Bar — custom wordmark exploration" data-image="assets/neighbors/neighbors-wordmark.png" type="button">
+<span aria-hidden="true" class="project-number">04</span>
 <div aria-hidden="true" class="neighbor-preview">
 <img alt="" class="neighbor-wordmark" loading="lazy" src="assets/neighbors/neighbors-wordmark.png"/>
 <div class="neighbor-preview-strip">
@@ -375,7 +375,7 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <span>© 2026 Adonnis Blake</span>
 <span data-i18n="Built through active iteration with product engineering, AI assistance, UI/UX, and code.">Built through active iteration with product engineering, AI assistance, UI/UX, and code.</span>
 </footer>
-<div aria-hidden="true" aria-labelledby="projectModalTitle" aria-modal="true" class="modal" id="projectModal" role="dialog">
+<div aria-hidden="true" aria-labelledby="projectModalTitle" aria-modal="true" class="modal" hidden inert id="projectModal" role="dialog">
 <div class="modal-backdrop" data-modal-close=""></div>
 <article class="modal-panel" role="document">
 <button class="modal-close" data-i18n="Close" data-modal-close="" type="button">Close</button>
@@ -387,22 +387,22 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <div class="examples-shell" id="modalExamplesShell">
 <div class="examples-line">
 <div><p class="eyebrow" data-i18n="Visual examples">Visual examples</p><p data-i18n="Open the examples only when you want the full proof board." id="projectModalExamplesNote">Open the examples only when you want the full proof board.</p></div>
-<button aria-expanded="false" class="button button-dark" data-i18n="More" id="modalExamplesToggle" type="button">More</button>
+<button aria-expanded="false" class="button button-dark" data-i18n="More" aria-controls="projectModalExamples" id="modalExamplesToggle" type="button">More</button>
 </div>
 <div aria-hidden="true" class="examples-panel" id="projectModalExamples"></div>
 </div>
 <div class="modal-actions" id="projectModalActions"></div>
 </article>
 </div>
-<div aria-hidden="true" aria-label="Image preview" aria-modal="true" class="modal image-modal" id="imageModal" role="dialog">
+<div aria-hidden="true" aria-labelledby="imageModalCaption" aria-modal="true" class="modal image-modal" hidden inert id="imageModal" role="dialog">
 <div class="modal-backdrop" data-image-close=""></div>
 <figure class="image-panel">
 <button class="modal-close" data-i18n="Close" data-image-close="" type="button">Close</button>
 <img alt="" id="imageModalImg">
 <figcaption id="imageModalCaption"></figcaption>
-</img></figure>
+</figure>
 </div>
-<div aria-hidden="true" aria-labelledby="inquiryTitle" aria-modal="true" class="modal inquiry-modal" id="inquiryModal" role="dialog">
+<div aria-hidden="true" aria-labelledby="inquiryTitle" aria-modal="true" class="modal inquiry-modal" hidden inert id="inquiryModal" role="dialog">
 <div class="modal-backdrop" data-inquiry-close=""></div>
 <article class="modal-panel inquiry-panel" role="document">
 <button class="modal-close" data-i18n="Close" data-inquiry-close="" type="button">Close</button>
@@ -410,8 +410,8 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 <h2 data-i18n="Send the basics." id="inquiryTitle">Send the basics.</h2>
 <p data-i18n="Nothing overcomplicated. Tell me what you’re building, what kind of help you need, and where the project stands.">Nothing overcomplicated. Tell me what you’re building, what kind of help you need, and where the project stands.</p>
 <form class="inquiry-form" id="inquiryForm">
-<label><span data-i18n="Name">Name</span><input data-i18n-placeholder="Your name" name="name" placeholder="Your name" required="" type="text"/></label>
-<label><span data-i18n="Email">Email</span><input data-i18n-placeholder="you@email.com" name="email" placeholder="you@email.com" required="" type="email"/></label>
+<label><span data-i18n="Name">Name</span><input data-i18n-placeholder="Your name" autocomplete="name" name="name" placeholder="Your name" required="" type="text"/></label>
+<label><span data-i18n="Email">Email</span><input data-i18n-placeholder="you@email.com" autocomplete="email" name="email" placeholder="you@email.com" required="" type="email"/></label>
 <label><span data-i18n="Project type">Project type</span><select name="type"><option>Full-time design engineer role</option><option>Contract / freelance</option><option>Product engineering / UI UX</option><option>Brand identity</option><option>Website / landing page</option><option>Creative direction / brand system</option><option>Not sure yet</option></select></label>
 <label><span data-i18n="Timeline">Timeline</span><select name="timeline"><option>Just exploring</option><option>This month</option><option>1–3 months</option><option>3+ months</option></select></label>
 <label><span data-i18n="Budget / scope">Budget / scope</span><select name="budget"><option>Small focused pass</option><option>Medium project</option><option>Large / ongoing build</option><option>Need help scoping</option></select></label>
@@ -420,6 +420,6 @@ try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'dark
 </form>
 </article>
 </div>
-<script src="i18n.js?v=67d59bf834"></script><script src="script.js?v=0c98dce478"></script><script src="scroll-story.js?v=0416132216" defer></script>
+<script src="i18n.js?v=c0856e7f4c"></script><script src="script.js?v=4e777afbd8"></script><script src="scroll-story.js?v=0416132216" defer></script>
 </body>
 </html>
